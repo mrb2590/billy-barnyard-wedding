@@ -16,7 +16,25 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Billy Barnyard Wedding'),
+
+    'short_name' => env('APP_SHORT_NAME', 'Billy Barnyard'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Version
+    |--------------------------------------------------------------------------
+    */
+
+    'version' => 'v0.1.0',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Theme color
+    |--------------------------------------------------------------------------
+    */
+
+    'theme_color' => env('APP_THEME_COLOR', '#0f172a'),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +73,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://billybarnyard.com'),
 
     'asset_url' => env('ASSET_URL'),
 

@@ -1,26 +1,39 @@
 // https://aka.ms/devcontainer.json
 {
-	"name": "Existing Docker Compose (Extend)",
-	"dockerComposeFile": [
-		"../docker-compose.yml"
-	],
-	"service": "laravel.test",
-	"workspaceFolder": "/var/www/html",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				// "mikestead.dotenv",
-				// "amiralizadeh9480.laravel-extra-intellisense",
-				// "ryannaddy.laravel-artisan",
-				// "onecentlin.laravel5-snippets",
-				// "onecentlin.laravel-blade"
-			],
-			"settings": {}
-		}
-	},
-	"remoteUser": "sail",
-	"postCreateCommand": "chown -R 1000:1000 /var/www/html"
-	// "forwardPorts": [],
-	// "runServices": [],
-	// "shutdownAction": "none",
+    "name": "Billy Barnyard Wedding",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "billybarnyard.test",
+    "workspaceFolder": "/var/www/html",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "amiralizadeh9480.laravel-extra-intellisense",
+                "austenc.laravel-blade-spacer",
+                "bmewburn.vscode-intelephense-client",
+                "bradlc.vscode-tailwindcss",
+                "calebporzio.better-phpunit",
+                "christian-kohler.npm-intellisense",
+                "codingyu.laravel-goto-view",
+                "dbaeumer.vscode-eslint",
+                "donjayamanne.githistory",
+                "eamodio.gitlens",
+                "EditorConfig.EditorConfig",
+                "esbenp.prettier-vscode",
+                "leizongmin.node-module-intellisense",
+                "MehediDracula.php-namespace-resolver",
+                "ms-azuretools.vscode-docker",
+                "onecentlin.laravel-blade",
+                "ryannaddy.laravel-artisan",
+                "shufo.vscode-blade-formatter",
+                "Vue.volar",
+                "xdebug.php-debug"
+            ],
+            "settings": {}
+        }
+    },
+    "remoteUser": "sail",
+    "postCreateCommand": "chown -R 1000:1000 /var/www/html"
+    // "forwardPorts": [],
+    // "runServices": [],
+    // "shutdownAction": "none",
 }
