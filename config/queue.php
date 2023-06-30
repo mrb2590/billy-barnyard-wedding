@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Queue Connection Name
@@ -29,9 +28,8 @@ return [
     */
 
     'connections' => [
-
         'sync' => [
-            'driver' => 'sync',
+            'driver' => 'sync'
         ],
 
         'database' => [
@@ -39,7 +37,7 @@ return [
             'table' => 'jobs',
             'queue' => 'default',
             'retry_after' => 90,
-            'after_commit' => false,
+            'after_commit' => false
         ],
 
         'beanstalkd' => [
@@ -48,7 +46,7 @@ return [
             'queue' => 'default',
             'retry_after' => 90,
             'block_for' => 0,
-            'after_commit' => false,
+            'after_commit' => false
         ],
 
         'sqs' => [
@@ -59,7 +57,7 @@ return [
             'queue' => env('SQS_QUEUE', 'default'),
             'suffix' => env('SQS_SUFFIX'),
             'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
-            'after_commit' => false,
+            'after_commit' => false
         ],
 
         'redis' => [
@@ -68,9 +66,8 @@ return [
             'queue' => env('REDIS_QUEUE', 'default'),
             'retry_after' => 90,
             'block_for' => null,
-            'after_commit' => false,
-        ],
-
+            'after_commit' => false
+        ]
     ],
 
     /*
@@ -86,7 +83,7 @@ return [
 
     'batching' => [
         'database' => env('DB_CONNECTION', 'mysql'),
-        'table' => 'job_batches',
+        'table' => 'job_batches'
     ],
 
     /*
@@ -103,7 +100,6 @@ return [
     'failed' => [
         'driver' => env('QUEUE_FAILED_DRIVER', 'database-uuids'),
         'database' => env('DB_CONNECTION', 'mysql'),
-        'table' => 'failed_jobs',
-    ],
-
+        'table' => 'failed_jobs'
+    ]
 ];
