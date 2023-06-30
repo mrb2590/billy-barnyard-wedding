@@ -1,0 +1,11 @@
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/public/vendor
+/storage
+/vendor
+/bootstrap/cache
+/bootstrap/ssr
+composer.lock
+package-lock.json

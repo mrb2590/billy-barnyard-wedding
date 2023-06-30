@@ -10,17 +10,17 @@ This site is hosted on my Digital Ocean droplet along with my other websites.
 
 ### My Requirement for this Project
 
--   Have a single page with all the information guests will need for the wedding. This includes the following:
-    -   List the venue, date, time, and accommodations
-    -   Have a button that links to Google maps for directions
-    -   Have a button that links to the hotel accommodations for easy booking
-    -   Have a button that links to our registry
-    -   Show a countdown timer until or since the wedding
-    -   Show our story with the major events in our relationship
--   Including [Flippy Bill](https://flippy-bill.buonomo.net), a JavaScript game I created a while ago, for guests to play
--   Allow guests to RSVP for themselves and others in their party
--   Send notifications to guests if they want to add their email address when they RSVP
--   Try to do something cool that wedding website services likely do not offer
+- Have a single page with all the information guests will need for the wedding. This includes the following:
+  - List the venue, date, time, and accommodations
+  - Have a button that links to Google maps for directions
+  - Have a button that links to the hotel accommodations for easy booking
+  - Have a button that links to our registry
+  - Show a countdown timer until or since the wedding
+  - Show our story with the major events in our relationship
+- Including [Flippy Bill](https://flippy-bill.buonomo.net), a JavaScript game I created a while ago, for guests to play
+- Allow guests to RSVP for themselves and others in their party
+- Send notifications to guests if they want to add their email address when they RSVP
+- Try to do something cool that wedding website services likely do not offer
 
 ## Security Vulnerabilities
 
