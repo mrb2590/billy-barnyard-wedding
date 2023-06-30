@@ -19,6 +19,7 @@
                 "eamodio.gitlens",
                 "EditorConfig.EditorConfig",
                 "esbenp.prettier-vscode",
+                "GitHub.vscode-github-actions",
                 "leizongmin.node-module-intellisense",
                 "MehediDracula.php-namespace-resolver",
                 "ms-azuretools.vscode-docker",
