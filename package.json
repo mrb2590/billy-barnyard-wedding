@@ -3,6 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "build-dev": "vite build -m development",
         "build": "vite build && vite build --ssr",
         "prettier": "npx prettier --write .",
         "lint": "eslint --ext .js,.vue . --fix"
