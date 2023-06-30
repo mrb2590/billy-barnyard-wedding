@@ -8,7 +8,8 @@
   import GuestLayout from '@/Layouts/GuestLayout.vue';
 
   const form = useForm({
-    name: '',
+    first_name: '',
+    last_name: '',
     email: '',
     password: '',
     password_confirmation: ''
@@ -27,19 +28,34 @@
 
     <form @submit.prevent="submit">
       <div>
-        <InputLabel for="name" value="Name" />
+        <InputLabel for="firstName" value="First Name" />
 
         <TextInput
-          id="name"
-          v-model="form.name"
+          id="firstName"
+          v-model="form.first_name"
           type="text"
           class="mt-1 block w-full"
           required
           autofocus
-          autocomplete="name"
+          autocomplete="given-name"
         />
 
-        <InputError class="mt-2" :message="form.errors.name" />
+        <InputError class="mt-2" :message="form.errors.first_name" />
+      </div>
+
+      <div>
+        <InputLabel for="lastName" value="Last Name" />
+
+        <TextInput
+          id="lastName"
+          v-model="form.last_name"
+          type="text"
+          class="mt-1 block w-full"
+          required
+          autocomplete="family-name"
+        />
+
+        <InputError class="mt-2" :message="form.errors.last_name" />
       </div>
 
       <div class="mt-4">
