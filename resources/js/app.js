@@ -9,6 +9,8 @@ import {ZiggyVue} from '../../vendor/tightenco/ziggy/dist/vue.m';
 
 const appName = import.meta.env.VITE_APP_NAME ?? 'Billy Barnyard Wedding';
 
+import.meta.glob(['../images/**', '../favicon/**']);
+
 if (process.env.NODE_ENV === 'production') {
   router.on('navigate', (event) => {
     window.dataLayer = window.dataLayer || [];
