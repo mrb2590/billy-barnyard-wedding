@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\FaviconController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WebAppManifestController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -15,6 +17,10 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/favicon.ico', [FaviconController::class, 'show']);
+
+Route::get('/site.webmanifest', [WebAppManifestController::class, 'show']);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
