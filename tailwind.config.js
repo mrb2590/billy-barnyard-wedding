@@ -1,5 +1,8 @@
-import forms from '@tailwindcss/forms';
+import tailwindAspectRatio from '@tailwindcss/aspect-ratio';
+import tailwindForms from '@tailwindcss/forms';
+import colors from 'tailwindcss/colors';
 import defaultTheme from 'tailwindcss/defaultTheme';
+import plugin from 'tailwindcss/plugin';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,14 +12,30 @@ export default {
     './resources/views/**/*.blade.php',
     './resources/js/**/*.vue'
   ],
-
   theme: {
     extend: {
+      colors: {
+        primary: colors.slate,
+        secondary: colors.sky,
+        success: colors.green,
+        danger: colors.red
+      },
       fontFamily: {
-        sans: ['Figtree', ...defaultTheme.fontFamily.sans]
+        primary: ['Abhaya Libre', ...defaultTheme.fontFamily.serif],
+        secondary: ['Cormorant', ...defaultTheme.fontFamily.serif]
+      },
+      screens: {
+        xs: '480px'
       }
     }
   },
-
-  plugins: [forms]
+  plugins: [
+    tailwindForms,
+    tailwindAspectRatio,
+    plugin(function ({addComponents, addVariant, theme}) {
+      ['error', 'filled', 'processing'].forEach((variant) => {
+        addVariant(variant, [`&[data-${variant}=true]`, `[data-${variant}=true] &`]);
+      });
+    })
+  ]
 };
