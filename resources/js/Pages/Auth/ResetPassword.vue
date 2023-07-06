@@ -3,9 +3,14 @@
 
   import InputError from '@/Components/InputError.vue';
   import InputLabel from '@/Components/InputLabel.vue';
-  import PrimaryButton from '@/Components/PrimaryButton.vue';
   import TextInput from '@/Components/TextInput.vue';
+  import ThemeButton from '@/Components/ThemeButton.vue';
   import GuestLayout from '@/Layouts/GuestLayout.vue';
+  import AuthCard from '@/Pages/Auth/Partials/AuthCard.vue';
+
+  defineOptions({
+    layout: GuestLayout
+  });
 
   const props = defineProps({
     email: {
@@ -33,13 +38,12 @@
 </script>
 
 <template>
-  <GuestLayout>
+  <AuthCard>
     <Head title="Reset Password" />
 
     <form @submit.prevent="submit">
       <div>
-        <InputLabel for="email" value="Email" />
-
+        <InputLabel for="email" value="Email" :error="form.errors.email" />
         <TextInput
           id="email"
           v-model="form.email"
@@ -48,14 +52,13 @@
           required
           autofocus
           autocomplete="username"
+          :error="form.errors.email"
         />
-
         <InputError class="mt-2" :message="form.errors.email" />
       </div>
 
       <div class="mt-4">
-        <InputLabel for="password" value="Password" />
-
+        <InputLabel for="password" value="Password" :error="form.errors.password" />
         <TextInput
           id="password"
           v-model="form.password"
@@ -63,14 +66,17 @@
           class="mt-1 block w-full"
           required
           autocomplete="new-password"
+          :error="form.errors.password"
         />
-
         <InputError class="mt-2" :message="form.errors.password" />
       </div>
 
       <div class="mt-4">
-        <InputLabel for="password_confirmation" value="Confirm Password" />
-
+        <InputLabel
+          for="password_confirmation"
+          value="Confirm Password"
+          :error="form.errors.password_confirmation"
+        />
         <TextInput
           id="password_confirmation"
           v-model="form.password_confirmation"
@@ -78,16 +84,14 @@
           class="mt-1 block w-full"
           required
           autocomplete="new-password"
+          :error="form.errors.password_confirmation"
         />
-
         <InputError class="mt-2" :message="form.errors.password_confirmation" />
       </div>
 
       <div class="flex items-center justify-end mt-4">
-        <PrimaryButton :class="{'opacity-25': form.processing}" :disabled="form.processing">
-          Reset Password
-        </PrimaryButton>
+        <ThemeButton :processing="form.processing" variant="secondary">Reset Password</ThemeButton>
       </div>
     </form>
-  </GuestLayout>
+  </AuthCard>
 </template>

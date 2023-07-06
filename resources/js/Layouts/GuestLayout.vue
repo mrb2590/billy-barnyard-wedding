@@ -1,23 +1,22 @@
 <script setup>
-  import {Link} from '@inertiajs/vue3';
-
-  import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+  import ParallaxBackgroundImage from '@/Components/ParallaxBackgroundImage.vue';
 </script>
 
 <template>
-  <div
-    class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900"
-  >
-    <div>
-      <Link href="/">
-        <ApplicationLogo class="w-20 h-20 fill-current text-gray-500" />
-      </Link>
-    </div>
+  <div class="relative min-h-screen flex flex-col sm:justify-center items-center p-6">
+    <ParallaxBackgroundImage image="flowers" />
 
-    <div
-      class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg"
+    <Transition
+      enter-active-class="transition ease-out duration-300"
+      enter-from-class="opacity-0 scale-95"
+      enter-to-class="opacity-100 scale-100"
+      leave-active-class="transition ease-in duration-300"
+      leave-from-class="opacity-100 scale-100"
+      leave-to-class="opacity-0 scale-95"
+      appear
+      mode="out-in"
     >
       <slot />
-    </div>
+    </Transition>
   </div>
 </template>

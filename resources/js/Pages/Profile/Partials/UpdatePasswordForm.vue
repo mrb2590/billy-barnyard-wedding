@@ -4,8 +4,8 @@
 
   import InputError from '@/Components/InputError.vue';
   import InputLabel from '@/Components/InputLabel.vue';
-  import PrimaryButton from '@/Components/PrimaryButton.vue';
   import TextInput from '@/Components/TextInput.vue';
+  import ThemeButton from '@/Components/ThemeButton.vue';
 
   const passwordInput = ref(null);
   const currentPasswordInput = ref(null);
@@ -37,17 +37,18 @@
 <template>
   <section>
     <header>
-      <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">Update Password</h2>
+      <h2 class="text-lg">Update Password</h2>
 
-      <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-        Ensure your account is using a long, random password to stay secure.
-      </p>
+      <p class="mt-1">Ensure your account is using a long, random password to stay secure.</p>
     </header>
 
     <form class="mt-6 space-y-6" @submit.prevent="updatePassword">
       <div>
-        <InputLabel for="current_password" value="Current Password" />
-
+        <InputLabel
+          for="current_password"
+          value="Current Password"
+          :error="form.errors.current_password"
+        />
         <TextInput
           id="current_password"
           ref="currentPasswordInput"
@@ -55,14 +56,13 @@
           type="password"
           class="mt-1 block w-full"
           autocomplete="current-password"
+          :error="form.errors.current_password"
         />
-
         <InputError :message="form.errors.current_password" class="mt-2" />
       </div>
 
       <div>
-        <InputLabel for="password" value="New Password" />
-
+        <InputLabel for="password" value="New Password" :error="form.errors.password" />
         <TextInput
           id="password"
           ref="passwordInput"
@@ -70,36 +70,37 @@
           type="password"
           class="mt-1 block w-full"
           autocomplete="new-password"
+          :error="form.errors.password"
         />
-
         <InputError :message="form.errors.password" class="mt-2" />
       </div>
 
       <div>
-        <InputLabel for="password_confirmation" value="Confirm Password" />
-
+        <InputLabel
+          for="password_confirmation"
+          value="Confirm Password"
+          :error="form.errors.password_confirmation"
+        />
         <TextInput
           id="password_confirmation"
           v-model="form.password_confirmation"
           type="password"
           class="mt-1 block w-full"
           autocomplete="new-password"
+          :error="form.errors.password_confirmation"
         />
-
         <InputError :message="form.errors.password_confirmation" class="mt-2" />
       </div>
 
       <div class="flex items-center gap-4">
-        <PrimaryButton :disabled="form.processing">Save</PrimaryButton>
+        <ThemeButton :processing="form.processing" variant="secondary">Save</ThemeButton>
 
         <Transition
           enter-from-class="opacity-0"
           leave-to-class="opacity-0"
           class="transition ease-in-out"
         >
-          <p v-if="form.recentlySuccessful" class="text-sm text-gray-600 dark:text-gray-400">
-            Saved.
-          </p>
+          <p v-if="form.recentlySuccessful" class="text-sm text-success-700">Saved.</p>
         </Transition>
       </div>
     </form>

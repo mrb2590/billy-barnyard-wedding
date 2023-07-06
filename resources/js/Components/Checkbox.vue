@@ -30,6 +30,6 @@
     v-model="proxyChecked"
     type="checkbox"
     :value="value"
-    class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
+    class="focus:ring-1 focus:ring-primary-700 focus:ring-offset-1 focus:ring-offset-primary-400 error:focus:ring-danger-700 error:border-danger-700 border-primary-700 checked:bg-primary-700 focus:border-primary-700 text-primary-700 rounded-sm bg-white transition"
   />
 </template>

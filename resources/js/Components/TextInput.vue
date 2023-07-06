@@ -1,10 +1,14 @@
 <script setup>
   import {onMounted, ref} from 'vue';
 
-  defineProps({
+  const props = defineProps({
     modelValue: {
       type: String,
       required: true
+    },
+    error: {
+      type: String,
+      default: null
     }
   });
 
@@ -24,8 +28,9 @@
 <template>
   <input
     ref="input"
-    class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm"
-    :value="modelValue"
+    :data-error="!!props.error"
+    class="text-primary-700 focus:ring-1 focus:ring-primary-700 focus:ring-offset-1 focus:ring-offset-primary-400 error:focus:ring-danger-700 error:border-danger-700 border-primary-700 focus:border-primary-700 font-primary font-bold tracking-widest rounded-sm bg-white p-2 transition"
+    :value="props.modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
   />
 </template>

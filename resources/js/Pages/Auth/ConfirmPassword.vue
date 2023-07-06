@@ -3,9 +3,14 @@
 
   import InputError from '@/Components/InputError.vue';
   import InputLabel from '@/Components/InputLabel.vue';
-  import PrimaryButton from '@/Components/PrimaryButton.vue';
   import TextInput from '@/Components/TextInput.vue';
+  import ThemeButton from '@/Components/ThemeButton.vue';
   import GuestLayout from '@/Layouts/GuestLayout.vue';
+  import AuthCard from '@/Pages/Auth/Partials/AuthCard.vue';
+
+  defineOptions({
+    layout: GuestLayout
+  });
 
   const form = useForm({
     password: ''
@@ -19,10 +24,10 @@
 </script>
 
 <template>
-  <GuestLayout>
+  <AuthCard>
     <Head title="Confirm Password" />
 
-    <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
+    <div class="mb-4">
       This is a secure area of the application. Please confirm your password before continuing.
     </div>
 
@@ -42,14 +47,10 @@
       </div>
 
       <div class="flex justify-end mt-4">
-        <PrimaryButton
-          class="ml-4"
-          :class="{'opacity-25': form.processing}"
-          :disabled="form.processing"
-        >
+        <ThemeButton type="submit" class="ml-4" :processing="form.processing" variant="secondary">
           Confirm
-        </PrimaryButton>
+        </ThemeButton>
       </div>
     </form>
-  </GuestLayout>
+  </AuthCard>
 </template>

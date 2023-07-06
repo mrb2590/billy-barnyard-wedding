@@ -45,6 +45,9 @@ export default {
           '@apply antialiased': {},
           fontSize: '16px',
           '-webkit-tap-highlight-color': 'rgba(255, 255, 255, 0)'
+        },
+        'h1,h2,h3,h4,h5,h6': {
+          '@apply heading-text': {}
         }
       });
 
