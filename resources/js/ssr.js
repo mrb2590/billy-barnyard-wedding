@@ -1,6 +1,7 @@
 import {createInertiaApp, router} from '@inertiajs/vue3';
 import createServer from '@inertiajs/vue3/server';
 import {renderToString} from '@vue/server-renderer';
+import {gsap} from 'gsap';
 import {resolvePageComponent} from 'laravel-vite-plugin/inertia-helpers';
 import {createSSRApp, h} from 'vue';
 
@@ -21,7 +22,7 @@ createServer((page) =>
   createInertiaApp({
     page,
     render: renderToString,
-    title: (title) => `${title} - ${appName}`,
+    title: (title) => (title ? `${title} - ${appName}` : appName),
     resolve: (name) =>
       resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
     setup({App, props, plugin}) {
@@ -30,7 +31,8 @@ createServer((page) =>
         .use(ZiggyVue, {
           ...page.props.ziggy,
           location: new URL(page.props.ziggy.location)
-        });
+        })
+        .provide('gsap', gsap);
     }
   })
 );
