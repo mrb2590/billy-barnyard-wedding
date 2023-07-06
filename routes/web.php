@@ -18,10 +18,6 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/favicon.ico', [FaviconController::class, 'show']);
-
-Route::get('/site.webmanifest', [WebAppManifestController::class, 'show']);
-
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -29,7 +25,11 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION
     ]);
-});
+})->name('home');
+
+Route::get('/favicon.ico', [FaviconController::class, 'show']);
+
+Route::get('/site.webmanifest', [WebAppManifestController::class, 'show']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

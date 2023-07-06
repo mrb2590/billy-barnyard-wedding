@@ -12,7 +12,7 @@
     },
     contentClasses: {
       type: String,
-      default: 'py-1 bg-white dark:bg-gray-700'
+      default: 'py-1 bg-white text-primary-700'
     }
   });
 
@@ -51,10 +51,10 @@
     </div>
 
     <!-- Full Screen Dropdown Overlay -->
-    <div v-show="open" class="fixed inset-0 z-40" @click="open = false"/>
+    <div v-show="open" class="fixed inset-0 z-40" @click="open = false" />
 
-    <transition
-      enter-active-class="transition ease-out duration-200"
+    <Transition
+      enter-active-class="Transition ease-out duration-200"
       enter-from-class="transform opacity-0 scale-95"
       enter-to-class="transform opacity-100 scale-100"
       leave-active-class="transition ease-in duration-75"
@@ -63,15 +63,16 @@
     >
       <div
         v-show="open"
-        class="absolute z-50 mt-2 rounded-md shadow-lg"
+        class="absolute z-50 mt-2 bg-white rounded-sm shadow-lg"
+        raised
         :class="[widthClass, alignmentClasses]"
         style="display: none"
         @click="open = false"
       >
-        <div class="rounded-md ring-1 ring-black ring-opacity-5" :class="contentClasses">
+        <div class="rounded-sm ring-1 ring-primary-700 ring-opacity-5" :class="contentClasses">
           <slot name="content" />
         </div>
       </div>
-    </transition>
+    </Transition>
   </div>
 </template>

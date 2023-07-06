@@ -1,6 +1,10 @@
 <script setup>
-  defineProps({
+  const props = defineProps({
     value: {
+      type: String,
+      default: null
+    },
+    error: {
       type: String,
       default: null
     }
@@ -8,8 +12,11 @@
 </script>
 
 <template>
-  <label class="block font-medium text-sm text-gray-700 dark:text-gray-300">
-    <span v-if="value">{{ value }}</span>
-    <span v-else><slot /></span>
+  <label
+    :data-error="!!props.error"
+    class="text-primary-700 error:text-danger-700 heading-text w-fit"
+  >
+    <span v-if="props.value">{{ props.value }}</span>
+    <slot v-else />
   </label>
 </template>

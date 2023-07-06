@@ -23,18 +23,67 @@ export default {
       fontFamily: {
         primary: ['Abhaya Libre', ...defaultTheme.fontFamily.serif],
         secondary: ['Cormorant', ...defaultTheme.fontFamily.serif]
-      },
-      screens: {
-        xs: '480px'
       }
     }
   },
   plugins: [
     tailwindForms,
     tailwindAspectRatio,
-    plugin(function ({addComponents, addVariant, theme}) {
+    plugin(function ({addBase, addComponents, addVariant, addUtilities, theme}) {
       ['error', 'filled', 'processing'].forEach((variant) => {
         addVariant(variant, [`&[data-${variant}=true]`, `[data-${variant}=true] &`]);
+      });
+
+      addBase({
+        'html,body': {
+          backgroundColor: theme('backgroundColor.primary.950'),
+          fontFamily: theme('fontFamily.secondary'),
+          letterSpacing: theme('letterSpacing.widest'),
+          fontWeight: theme('fontWeight.bold'),
+          fontStyle: 'italic',
+          color: theme('colors.white'),
+          '@apply antialiased': {},
+          fontSize: '16px',
+          '-webkit-tap-highlight-color': 'rgba(255, 255, 255, 0)'
+        },
+        'h1,h2,h3,h4,h5,h6': {
+          '@apply heading-text': {}
+        }
+      });
+
+      addComponents({
+        '.heading-text': {
+          fontFamily: theme('fontFamily.primary'),
+          textTransform: 'uppercase',
+          fontStyle: 'normal',
+          fontWeight: theme('fontWeight.extrabold'),
+          letterSpacing: theme('letterSpacing.widest')
+        },
+        '.body-text': {
+          fontFamily: theme('fontFamily.secondary'),
+          textTransform: 'none',
+          fontStyle: 'italic',
+          fontWeight: theme('fontWeight.bold'),
+          letterSpacing: theme('letterSpacing.widest')
+        }
+      });
+
+      addUtilities({
+        '.blur-mask': {
+          mask: 'linear-gradient(black, transparent)'
+        },
+        '.blur-mask-reverse': {
+          mask: 'linear-gradient(transparent, black)'
+        },
+        '.text-shadow-default': {
+          textShadow: '0 20px 20px #000'
+        },
+        '.text-shadow-none': {
+          textShadow: 'none'
+        },
+        '.raised': {
+          '@apply shadow-lg shadow-black/80': {}
+        }
       });
     })
   ]
