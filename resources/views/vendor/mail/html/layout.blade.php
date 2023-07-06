@@ -35,10 +35,17 @@ width: 100% !important;
 <!-- Email Body -->
 <tr>
 <td class="body" width="100%" cellpadding="0" cellspacing="0" style="border: hidden !important;">
-<table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
+<table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="10" role="presentation">
 <!-- Body content -->
 <tr>
-<td class="content-cell">
+<td class="content-cell-bordered">
+<table class="supercopy" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+<tr>
+<td>
+<span>A|M</span>
+</td>
+</tr>
+</table>
 {{ Illuminate\Mail\Markdown::parse($slot) }}
 
 {{ $subcopy ?? '' }}
