@@ -1,4 +1,4 @@
-<p align="center"><a href="https://billybarnyard.com" target="_blank"><img src="https://raw.githubusercontent.com/mrb2590/billy-barnyard-wedding/master/resources/images/logo.svg" width="400" alt="Billy Barnyard Wedding Logo"></a></p>
+<p align="center"><a href="https://billybarnyard.com" target="_blank"><img src="https://raw.githubusercontent.com/mrb2590/billy-barnyard-wedding/master/resources/images/logo.svg" width="100" alt="Billy Barnyard Wedding Logo"></a></p>
 
 # Billy Barnyard Wedding
 
@@ -30,20 +30,30 @@ If you discover a security vulnerability, please send an e-mail to Mike Buonomo 
 
 Currently there is no license for this project and all rights are reserved.
 
-## Installation
+## Local Installation
+
+Requires Docker.
 
 1.  Clone the repository
 
         git clone git@github.com:mrb2590/billy-barnyard-wedding.git
 
-2.  Install composer dependencies
+2.  Install PHP dependencies
 
         composer install
 
-3.  Install npm dependencies
-
-        npm install
-
-4.  Run locally in Docker
+3.  Start container
 
         ./vendor/bin/sail up
+
+4.  Install Node.js dependencies
+
+        ./vendor/bin/sail npm install
+
+5.  Run Locally
+
+        ./vendor/bin/sail npm run dev
+
+## RESTful API
+
+See the [documentation here](https://documenter.getpostman.com/view/5647025/2s93zFYL3z).

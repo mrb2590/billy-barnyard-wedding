@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Vite;
 
 class WebAppManifestController extends Controller
 {
+    /**
+     * Generate the site.webmanifest.
+     */
     public function show(): JsonResponse
     {
         return response()->json([
