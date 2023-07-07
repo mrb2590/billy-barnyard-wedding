@@ -15,6 +15,10 @@
     start: {
       type: String,
       default: 'top bottom'
+    },
+    animate: {
+      type: Boolean,
+      default: true
     }
   });
 
@@ -22,20 +26,27 @@
   const wrapper = ref();
   const backgroundImage = ref();
   const images = ref({});
+  const bgHeight = ref('h-[125vh]');
+
+  if (!props.animate) {
+    bgHeight.value = 'h-full';
+  }
 
   for (let i = 1; i <= 3; i++) {
     images.value[`x${i}`] = getStaticAsset(`${props.image}${i > 1 ? `@${i}x` : ''}.webp`);
   }
 
   onMounted(() => {
-    gsap.to(backgroundImage.value, {
-      scrollTrigger: {
-        trigger: wrapper.value,
-        scrub: 2,
-        start: props.start
-      },
-      yPercent: -15
-    });
+    if (props.animate) {
+      gsap.to(backgroundImage.value, {
+        scrollTrigger: {
+          trigger: wrapper.value,
+          scrub: 2,
+          start: props.start
+        },
+        yPercent: -15
+      });
+    }
   });
 
   defineExpose({wrapper});
@@ -45,8 +56,8 @@
   <div ref="wrapper" class="absolute top-0 left-0 h-full w-full overflow-hidden z-0">
     <div
       ref="backgroundImage"
-      class="w-full h-[125%] bg-fixed bg-no-repeat bg-cover"
-      :class="bgSize"
+      class="w-full bg-fixed bg-no-repeat bg-cover"
+      :class="`${bgSize} ${bgHeight}`"
       :style="{
         backgroundImage: `url(${images.x3})`,
         backgroundImage: `image-set(url(${images.x1}) 1x, url(${images.x2}) 2x, url(${images.x3}) 3x)`,
