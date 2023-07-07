@@ -37,13 +37,15 @@
       yPercent: -15
     });
   });
+
+  defineExpose({wrapper});
 </script>
 
 <template>
   <div ref="wrapper" class="absolute top-0 left-0 h-full w-full overflow-hidden z-0">
     <div
       ref="backgroundImage"
-      class="absolute top-0 left-0 w-full h-[125%] bg-fixed bg-no-repeat bg-cover"
+      class="w-full h-[125%] bg-fixed bg-no-repeat bg-cover"
       :class="bgSize"
       :style="{
         backgroundImage: `url(${images.x3})`,
@@ -51,6 +53,6 @@
         backgroundImage: `-webkit-image-set(url(${images.x1}) 1x, url(${images.x2}) 2x, url(${images.x3}) 3x)`
       }"
     />
-    <!-- <div class="absolute top-0 left-0 w-full h-full bg-black/30" /> -->
+    <div class="absolute top-0 left-0 w-full h-full bg-black/30" />
   </div>
 </template>

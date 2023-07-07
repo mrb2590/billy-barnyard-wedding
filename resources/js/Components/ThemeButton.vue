@@ -78,7 +78,7 @@
       'bg-transparent',
       'border-none',
       'disabled:bg-transparent',
-      'text-lg',
+      'text-xl',
       'text-shadow-default',
       'text-white'
     ],

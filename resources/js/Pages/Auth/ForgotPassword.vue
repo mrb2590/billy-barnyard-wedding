@@ -12,7 +12,7 @@
     layout: GuestLayout
   });
 
-  defineProps({
+  const props = defineProps({
     status: {
       type: String,
       default: null
@@ -37,8 +37,8 @@
       password reset link that will allow you to choose a new one.
     </div>
 
-    <div v-if="status" class="mb-4 text-success-700">
-      {{ status }}
+    <div v-if="props.status" class="mb-4 text-success-700">
+      {{ props.status }}
     </div>
 
     <form @submit.prevent="submit">

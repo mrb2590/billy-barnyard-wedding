@@ -12,14 +12,14 @@
 </script>
 
 <template>
-  <div class="min-h-screen relative w-full pt-16">
-    <ParallaxBackgroundImage image="flowers" />
+  <div class="min-h-screen relative w-full h-full pt-16">
+    <ParallaxBackgroundImage image="flowers" start="top top" />
 
     <nav
       class="fixed z-20 top-0 left-0 w-full h-16"
       :class="{'bg-primary-950': showingNavigationDropdown}"
     >
-      <div class="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-primary-950 z-0" />
+      <div class="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-primary-950/80 z-0" />
       <div class="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-primary-950 z-0" />
       <div class="absolute w-full h-full top-0 left-0 blur-mask z-0" />
 
@@ -116,10 +116,10 @@
 
       <!-- Responsive Navigation Menu -->
       <Transition
-        enter-active-class="transition ease-out duration-300"
+        enter-active-class="transition ease-out duration-500"
         enter-from-class="opacity-0 scale-95"
         enter-to-class="opacity-100 scale-100"
-        leave-active-class="transition ease-in duration-300"
+        leave-active-class="transition ease-in duration-500"
         leave-from-class="opacity-100 scale-100"
         leave-to-class="opacity-0 scale-95"
         appear
@@ -171,10 +171,10 @@
     <!-- Page Content -->
     <main class="relative">
       <Transition
-        enter-active-class="transition ease-out duration-300"
+        enter-active-class="transition ease-out duration-500"
         enter-from-class="opacity-0"
         enter-to-class="opacity-100"
-        leave-active-class="transition ease-in duration-300"
+        leave-active-class="transition ease-in duration-500"
         leave-from-class="opacity-100"
         leave-to-class="opacity-0"
         appear

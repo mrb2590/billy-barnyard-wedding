@@ -28,7 +28,7 @@
     <Head title="Profile" />
 
     <div class="container mx-auto p-6 space-y-6">
-      <FancyCard>
+      <FancyCard raised>
         <UpdateProfileInformationForm
           :must-verify-email="props.mustVerifyEmail"
           :status="props.status"
@@ -36,11 +36,11 @@
         />
       </FancyCard>
 
-      <FancyCard>
+      <FancyCard raised>
         <UpdatePasswordForm class="max-w-xl" />
       </FancyCard>
 
-      <FancyCard>
+      <FancyCard raised>
         <DeleteUserForm class="max-w-xl" />
       </FancyCard>
     </div>
