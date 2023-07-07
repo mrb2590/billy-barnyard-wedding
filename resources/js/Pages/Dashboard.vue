@@ -13,6 +13,6 @@
   <div class="container mx-auto p-6">
     <Head title="Dashboard" />
 
-    <FancyCard> You're logged in! </FancyCard>
+    <FancyCard raised> You're logged in! </FancyCard>
   </div>
 </template>

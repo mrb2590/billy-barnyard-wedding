@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaviconController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebAppManifestController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,22 +18,13 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION
-    ]);
-})->name('home');
+Route::get('/', [HomeController::class, 'show'])->name('home');
 
 Route::get('/favicon.ico', [FaviconController::class, 'show']);
 
 Route::get('/site.webmanifest', [WebAppManifestController::class, 'show']);
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})
+Route::get('/dashboard', [DashboardController::class, 'show'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
