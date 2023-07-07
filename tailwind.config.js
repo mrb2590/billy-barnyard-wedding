@@ -37,14 +37,11 @@ export default {
       addBase({
         'html,body': {
           backgroundColor: theme('backgroundColor.primary.950'),
-          fontFamily: theme('fontFamily.secondary'),
-          letterSpacing: theme('letterSpacing.widest'),
-          fontWeight: theme('fontWeight.bold'),
-          fontStyle: 'italic',
           color: theme('colors.white'),
           '@apply antialiased': {},
           fontSize: '16px',
-          '-webkit-tap-highlight-color': 'rgba(255, 255, 255, 0)'
+          '-webkit-tap-highlight-color': 'rgba(255, 255, 255, 0)',
+          '@apply body-text': {}
         },
         'h1,h2,h3,h4,h5,h6': {
           '@apply heading-text': {}
@@ -70,10 +67,12 @@ export default {
 
       addUtilities({
         '.blur-mask': {
-          mask: 'linear-gradient(black, transparent)'
+          mask: 'linear-gradient(black, transparent)',
+          backdropFilter: 'blur(20px)'
         },
         '.blur-mask-reverse': {
-          mask: 'linear-gradient(transparent, black)'
+          mask: 'linear-gradient(transparent, black)',
+          backdropFilter: 'blur(20px)'
         },
         '.text-shadow-default': {
           textShadow: '0 20px 20px #000'

@@ -33,7 +33,7 @@
 </script>
 
 <template>
-  <PageSection class="flex items-start justify-center md:items-center">
+  <PageSection id="alexAndMike" class="flex items-start justify-center md:items-center">
     <ParallaxBackgroundImage
       ref="background"
       image="alex-mike-engagement"

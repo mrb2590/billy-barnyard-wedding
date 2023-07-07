@@ -20,14 +20,36 @@
     gsap.from(footerText.value, {y: '4rem', opacity: 0, duration: 3});
   };
 
+  const animateScroll = (id) => {
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: {y: id, autoKill: true},
+      ease: 'sine.inOut'
+    });
+  };
+
+  const scrollToSection = (id) => {
+    if (!route().current('home')) {
+      router.visit(route('home'), {
+        onSuccess: () => setTimeout(() => animateScroll(id), 1000)
+      });
+    } else {
+      animateScroll(id);
+    }
+  };
+
   onMounted(() => {
     navLinks.value = [
       {
-        href: route('home'),
+        id: 'alexAndMike',
         component: markRaw(OurNames),
         componentProps: {
           type: 'short'
         }
+      },
+      {
+        id: 'whenAndWhere',
+        title: 'When & Where'
       }
     ];
 
@@ -51,7 +73,12 @@
 
       <ul class="container flex flex-row justify-center space-x-6 items-center relative z-20 p-6">
         <li v-for="(navLink, i) in navLinks" :key="i" ref="links">
-          <ThemeButton variant="nav" :href="navLink.href" class="text-3xl">
+          <ThemeButton
+            variant="nav"
+            :href="navLink.href"
+            class="text-3xl"
+            @click.prevent="!navLink.href ? scrollToSection(`#${navLink.id}`) : () => {}"
+          >
             <component
               :is="navLink.component"
               v-if="navLink.component"
@@ -78,7 +105,7 @@
       </main>
     </Transition>
 
-    <footer class="w-full h-16 z-20 absolute bottom-0 left-0 flex justify-center items-center">
+    <footer class="w-full h-16 z-20 absolute bottom-0 left-0 flex justify-center items-end">
       <div
         ref="navBackground"
         class="absolute w-full h-16 top-0 left-0 bg-gradient-to-t from-primary-950/80 z-10"
@@ -88,7 +115,7 @@
         class="absolute w-full h-16 top-0 left-0 bg-gradient-to-t from-primary-950 blur-mask-reverse z-10"
       />
 
-      <div ref="footerText" class="text-shadow-default text-center relative z-20 p-6">
+      <div ref="footerText" class="text-shadow-default text-center relative z-20 px-6 pt-6 pb-3">
         Created by the
         <ThemeLink href="https://mike.buonomo.net" target="_blank" external>Groom</ThemeLink>
         <ApplicationLogo class="w-3 h-3 inline-block mx-2 align-baseline" />
