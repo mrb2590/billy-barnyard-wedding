@@ -16,9 +16,13 @@
       type: String,
       default: 'top bottom'
     },
+    end: {
+      type: String,
+      default: 'bottom top'
+    },
     animate: {
       type: Boolean,
-      default: true
+      default: false
     }
   });
 
@@ -26,7 +30,7 @@
   const wrapper = ref();
   const backgroundImage = ref();
   const images = ref({});
-  const bgHeight = ref('h-[125vh]');
+  const bgHeight = ref('h-[125%]');
 
   if (!props.animate) {
     bgHeight.value = 'h-full';
@@ -42,7 +46,8 @@
         scrollTrigger: {
           trigger: wrapper.value,
           scrub: 2,
-          start: props.start
+          start: props.start,
+          end: props.end
         },
         yPercent: -15
       });

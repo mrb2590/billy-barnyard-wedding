@@ -1,8 +1,8 @@
 <script setup>
   import {inject, nextTick, onMounted, ref} from 'vue';
 
+  import BackgroundImage from '@/Components/BackgroundImage.vue';
   import OurNames from '@/Components/OurNames.vue';
-  import ParallaxBackgroundImage from '@/Components/ParallaxBackgroundImage.vue';
   import HomeLayout from '@/Layouts/HomeLayout.vue';
   import PageSection from '@/Pages/Home/Partials/PageSection.vue';
 
@@ -34,11 +34,12 @@
 
 <template>
   <PageSection id="alexAndMike" class="flex items-start justify-center md:items-center">
-    <ParallaxBackgroundImage
+    <BackgroundImage
       ref="background"
       image="alex-mike-engagement"
       bg-size="bg-[21%_30%]"
       start="top top"
+      animate
     />
 
     <h1 class="text-shadow-default text-9xl md:text-6xl mt-36 md:mt-0">

@@ -1,10 +1,10 @@
 <script setup>
   import {ref} from 'vue';
 
+  import BackgroundImage from '@/Components/BackgroundImage.vue';
   import Dropdown from '@/Components/Dropdown.vue';
   import DropdownLink from '@/Components/DropdownLink.vue';
   import OurNames from '@/Components/OurNames.vue';
-  import ParallaxBackgroundImage from '@/Components/ParallaxBackgroundImage.vue';
   import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
   import ThemeButton from '@/Components/ThemeButton.vue';
 
@@ -13,7 +13,7 @@
 
 <template>
   <div class="min-h-screen relative w-full h-full pt-16">
-    <ParallaxBackgroundImage image="flowers" start="top top" />
+    <BackgroundImage image="flowers" start="top top" />
 
     <nav
       class="fixed z-20 top-0 left-0 w-full h-16"

@@ -1,10 +1,10 @@
 <script setup>
-  import ParallaxBackgroundImage from '@/Components/ParallaxBackgroundImage.vue';
+  import BackgroundImage from '@/Components/BackgroundImage.vue';
 </script>
 
 <template>
   <div class="relative min-h-screen w-full h-full flex flex-col sm:justify-center items-center p-6">
-    <ParallaxBackgroundImage image="flowers" start="top top" />
+    <BackgroundImage image="flowers" start="top top" />
 
     <Transition
       enter-active-class="transition ease-out duration-500"

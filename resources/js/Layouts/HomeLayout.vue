@@ -8,16 +8,16 @@
 
   const gsap = inject('gsap');
   const navLinks = ref([]);
-  const navBackground = ref();
+  const headerGradient = ref([]);
+  const footerGradient = ref([]);
   const links = ref();
   const footerText = ref();
 
   const animate = () => {
-    gsap.set(links.value, {opacity: 0});
-    gsap.set(navBackground.value, {opacity: 0});
-    gsap.to(links.value, {opacity: 1, duration: 1, stagger: 0.35, delay: 1});
-    gsap.to(navBackground.value, {opacity: 1, duration: 3});
-    gsap.from(footerText.value, {y: '4rem', opacity: 0, duration: 3});
+    gsap.from(links.value, {opacity: 0, duration: 1, stagger: 0.35, delay: 1});
+    gsap.from(headerGradient.value, {opacity: 0, duration: 3, delay: 1});
+    gsap.from(footerGradient.value, {opacity: 0, duration: 3, delay: 1});
+    gsap.from(footerText.value, {opacity: 0, duration: 1, delay: 1});
   };
 
   const animateScroll = (id) => {
@@ -50,6 +50,10 @@
       {
         id: 'whenAndWhere',
         title: 'When & Where'
+      },
+      {
+        id: 'registry',
+        title: 'Registry'
       }
     ];
 
@@ -62,14 +66,12 @@
 <template>
   <div class="relative min-h-screen w-full h-full flex flex-col">
     <nav class="fixed top-0 left-0 w-full h-24 mb-6 z-20 flex flex-row items-center justify-center">
-      <div
-        ref="navBackground"
-        class="absolute w-full h-36 top-0 left-0 bg-gradient-to-b from-primary-950/80 z-10"
-      />
-      <div
-        ref="navBackground"
-        class="absolute w-full h-36 top-0 left-0 bg-gradient-to-b from-primary-950 blur-mask z-10"
-      />
+      <div ref="headerGradient" class="absolute w-full h-36 top-0 left-0">
+        <div class="absolute w-full h-36 top-0 left-0 bg-gradient-to-b from-primary-950/80 z-10" />
+        <div
+          class="absolute w-full h-36 top-0 left-0 bg-gradient-to-b from-primary-950 blur-mask z-10"
+        />
+      </div>
 
       <ul class="container flex flex-row justify-center space-x-6 items-center relative z-20 p-6">
         <li v-for="(navLink, i) in navLinks" :key="i" ref="links">
@@ -106,14 +108,14 @@
     </Transition>
 
     <footer class="w-full h-16 z-20 absolute bottom-0 left-0 flex justify-center items-end">
-      <div
-        ref="navBackground"
-        class="absolute w-full h-16 top-0 left-0 bg-gradient-to-t from-primary-950/80 z-10"
-      />
-      <div
-        ref="navBackground"
-        class="absolute w-full h-16 top-0 left-0 bg-gradient-to-t from-primary-950 blur-mask-reverse z-10"
-      />
+      <div ref="footerGradient" class="absolute w-full h-16 top-0 left-0">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-primary-950/80 z-10"
+        />
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-primary-950 blur-mask-reverse z-10"
+        />
+      </div>
 
       <div ref="footerText" class="text-shadow-default text-center relative z-20 px-6 pt-6 pb-3">
         Created by the
