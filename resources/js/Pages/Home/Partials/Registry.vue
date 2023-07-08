@@ -12,7 +12,6 @@
   const section = ref();
   const heading = ref();
   const registryCard = ref();
-  const countdown = ref();
   const countdownText = ref();
   const countdownNumber = ref();
   const weddingDate = new Date(2023, 8, 16, 14, 0, 0);
@@ -38,9 +37,7 @@
 
     gsap.from(registryCard.value.card, {
       scrollTrigger: {
-        trigger: section.value.section,
-        scrub: 1,
-        end: 'bottom bottom'
+        trigger: section.value.section
       },
       scale: 0.5,
       opacity: 0
@@ -48,8 +45,7 @@
 
     gsap.from(countdownText.value, {
       scrollTrigger: {
-        trigger: registryCard.value.card,
-        start: 'top center'
+        trigger: section.value.section
       },
       ease: 'back.out',
       scale: 0,
@@ -60,9 +56,7 @@
 
     gsap.from(countdownNumber.value, {
       scrollTrigger: {
-        trigger: countdownNumber.value,
-        start: 'top center',
-        end: 'bottom bottom'
+        trigger: section.value.section
       },
       ease: 'bounce.out',
       y: -400,
@@ -92,12 +86,12 @@
   >
     <BackgroundImage image="she-said-yes" end="bottom center" bg-size="bg-[10%_30%]" animate />
 
-    <PageHeading ref="heading">
-      <h2>Our Registry</h2>
-    </PageHeading>
+    <div class="flex flex-col justify-center items-center">
+      <PageHeading ref="heading">
+        <h2>Registry</h2>
+      </PageHeading>
 
-    <div class="container flex flex-col justify-center items-center space-y-6 grow">
-      <FancyCard ref="registryCard" raised class="w-full max-w-sm">
+      <FancyCard ref="registryCard" raised class="w-full max-w-sm mb-6">
         <div class="h-full flex flex-col justify-between items-center text-lg">
           <div class="text-center">
             <p class="mb-6">
@@ -117,7 +111,7 @@
         </div>
       </FancyCard>
 
-      <div ref="countdown" class="flex flex-wrap justify-center items-center mb-3">
+      <div class="flex flex-wrap justify-center items-center mb-6">
         <div
           v-for="(value, field) in countdownDuration"
           v-show="countdownDuration[field] || field === 'seconds'"

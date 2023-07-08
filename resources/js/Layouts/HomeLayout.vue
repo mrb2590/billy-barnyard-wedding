@@ -13,7 +13,7 @@
   const links = ref();
   const footerText = ref();
 
-  const animate = () => {
+  const initAnimations = () => {
     gsap.from(links.value, {opacity: 0, duration: 1, stagger: 0.35, delay: 1});
     gsap.from(headerGradient.value, {opacity: 0, duration: 3, delay: 1});
     gsap.from(footerGradient.value, {opacity: 0, duration: 3, delay: 1});
@@ -52,28 +52,32 @@
         title: 'When & Where'
       },
       {
+        id: 'ourStory',
+        title: 'Our Story'
+      },
+      {
         id: 'registry',
         title: 'Registry'
       }
     ];
 
     nextTick(() => {
-      animate();
+      initAnimations();
     });
   });
 </script>
 
 <template>
   <div class="relative min-h-screen w-full h-full flex flex-col">
-    <nav class="fixed top-0 left-0 w-full h-24 mb-6 z-20 flex flex-row items-center justify-center">
+    <nav class="fixed top-0 left-0 w-full h-24 mb-6 z-40 flex flex-row items-center justify-center">
       <div ref="headerGradient" class="absolute w-full h-36 top-0 left-0">
-        <div class="absolute w-full h-36 top-0 left-0 bg-gradient-to-b from-primary-950/80 z-10" />
+        <div class="absolute w-full h-36 top-0 left-0 bg-gradient-to-b from-primary-950/80 z-30" />
         <div
-          class="absolute w-full h-36 top-0 left-0 bg-gradient-to-b from-primary-950 blur-mask z-10"
+          class="absolute w-full h-36 top-0 left-0 bg-gradient-to-b from-primary-950 blur-mask z-30"
         />
       </div>
 
-      <ul class="container flex flex-row justify-center space-x-6 items-center relative z-20 p-6">
+      <ul class="container flex flex-row justify-center space-x-6 items-center relative z-40 p-6">
         <li v-for="(navLink, i) in navLinks" :key="i" ref="links">
           <ThemeButton
             variant="nav"
@@ -107,17 +111,17 @@
       </main>
     </Transition>
 
-    <footer class="w-full h-16 z-20 absolute bottom-0 left-0 flex justify-center items-end">
+    <footer class="w-full h-16 z-40 absolute bottom-0 left-0 flex justify-center items-end">
       <div ref="footerGradient" class="absolute w-full h-16 top-0 left-0">
         <div
-          class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-primary-950/80 z-10"
+          class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-primary-950/80 z-30"
         />
         <div
-          class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-primary-950 blur-mask-reverse z-10"
+          class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-primary-950 blur-mask-reverse z-30"
         />
       </div>
 
-      <div ref="footerText" class="text-shadow-default text-center relative z-20 px-6 pt-6 pb-3">
+      <div ref="footerText" class="text-shadow-default text-center relative z-40 px-6 pt-6 pb-3">
         Created by the
         <ThemeLink href="https://mike.buonomo.net" target="_blank" external>Groom</ThemeLink>
         <ApplicationLogo class="w-3 h-3 inline-block mx-2 align-baseline" />

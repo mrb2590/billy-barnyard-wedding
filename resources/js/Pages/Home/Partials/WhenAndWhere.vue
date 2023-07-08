@@ -23,6 +23,7 @@
       opacity: 0,
       yPercent: -300
     });
+
     gsap.from(partyCard.value.card, {
       scrollTrigger: {
         trigger: partyCard.value.card,
@@ -31,6 +32,7 @@
       },
       xPercent: -100
     });
+
     gsap.from(accomCard.value.card, {
       scrollTrigger: {
         trigger: partyCard.value.card,
@@ -39,6 +41,7 @@
       },
       xPercent: 100
     });
+
     gsap.fromTo(
       partyCard.value.card,
       {
@@ -60,6 +63,7 @@
         transformOrigin: 'bottom left'
       }
     );
+
     gsap.fromTo(
       accomCard.value.card,
       {
@@ -95,11 +99,11 @@
     has-header
     class="flex flex-col justify-center items-center"
   >
-    <PageHeading ref="heading">
-      <h2>When &amp; Where</h2>
-    </PageHeading>
+    <div class="grow w-full flex justify-center items-center flex-col">
+      <PageHeading ref="heading">
+        <h2>When &amp; Where</h2>
+      </PageHeading>
 
-    <div class="grow w-full flex justify-center items-center">
       <div
         class="container flex flex-col md:flex-row justify-center items-center md:items-stretch space-y-6 md:space-y-0 md:space-x-6 lg:space-x-14"
       >

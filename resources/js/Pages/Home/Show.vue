@@ -7,6 +7,8 @@
   import Registry from '@/Pages/Home/Partials/Registry.vue';
   import WhenAndWhere from '@/Pages/Home/Partials/WhenAndWhere.vue';
 
+  import OurStory from './Partials/OurStory.vue';
+
   defineOptions({layout: HomeLayout});
 </script>
 
@@ -24,12 +26,14 @@
 
     <div class="relative w-full">
       <BackgroundImage image="flowers" />
-      <div class="absolute blur-mask bg-gradient-to-b from-black top-0 left-0 w-full h-14" />
-      <div
-        class="absolute blur-mask-reverse bg-gradient-to-t from-black bottom-0 left-0 w-full h-14"
-      />
+      <div class="absolute blur-mask bg-gradient-to-b from-black top-0 left-0 w-full h-14 z-20" />
 
       <WhenAndWhere />
+      <OurStory />
+
+      <div
+        class="absolute blur-mask-reverse bg-gradient-to-t from-black bottom-0 left-0 w-full h-14 z-20"
+      />
     </div>
 
     <Registry />
