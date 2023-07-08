@@ -3,8 +3,8 @@
 
   import FancyCard from '@/Components/FancyCard.vue';
   import PageHeading from '@/Components/PageHeading.vue';
+  import PageSection from '@/Components/PageSection.vue';
   import {getOurStoryEvents} from '@/Data/our-story-events';
-  import PageSection from '@/Pages/Home/Partials/PageSection.vue';
 
   import BoardPhoto from './BoardPhoto.vue';
   import WoodBoard from './WoodBoard.vue';

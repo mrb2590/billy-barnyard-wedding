@@ -1,4 +1,5 @@
 <script setup>
+  import {router} from '@inertiajs/vue3';
   import {inject, markRaw, nextTick, onMounted, ref} from 'vue';
 
   import ApplicationLogo from '@/Components/ApplicationLogo.vue';
@@ -58,6 +59,10 @@
       {
         id: 'registry',
         title: 'Registry'
+      },
+      {
+        title: 'Play',
+        href: route('play')
       }
     ];
 

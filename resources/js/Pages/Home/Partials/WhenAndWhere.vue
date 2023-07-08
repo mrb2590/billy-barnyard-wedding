@@ -3,8 +3,8 @@
 
   import FancyCard from '@/Components/FancyCard.vue';
   import PageHeading from '@/Components/PageHeading.vue';
+  import PageSection from '@/Components/PageSection.vue';
   import ThemeButton from '@/Components/ThemeButton.vue';
-  import PageSection from '@/Pages/Home/Partials/PageSection.vue';
 
   const gsap = inject('gsap');
 

@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaviconController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PlayController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebAppManifestController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'show'])->name('home');
+
+Route::get('/play', [PlayController::class, 'show'])->name('play');
 
 Route::get('/favicon.ico', [FaviconController::class, 'show']);
 

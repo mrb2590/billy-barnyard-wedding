@@ -3,8 +3,8 @@
 
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import OurNames from '@/Components/OurNames.vue';
+  import PageSection from '@/Components/PageSection.vue';
   import HomeLayout from '@/Layouts/HomeLayout.vue';
-  import PageSection from '@/Pages/Home/Partials/PageSection.vue';
 
   defineOptions({
     layout: HomeLayout
