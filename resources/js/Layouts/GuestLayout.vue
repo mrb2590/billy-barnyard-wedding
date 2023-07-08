@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="relative min-h-screen w-full h-full flex flex-col sm:justify-center items-center p-6">
+  <div class="relative min-h-screen w-full flex flex-col sm:justify-center items-center p-6">
     <BackgroundImage image="flowers" start="top top" />
 
     <Transition

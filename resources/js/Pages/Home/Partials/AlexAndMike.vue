@@ -1,5 +1,5 @@
 <script setup>
-  import {inject, nextTick, onMounted, ref} from 'vue';
+  import {inject, onMounted, ref} from 'vue';
 
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import OurNames from '@/Components/OurNames.vue';
@@ -14,22 +14,23 @@
   const background = ref();
   const ourNames = ref();
   const ourNamesMouseAnimationEnabled = ref(false);
-  const animate = () => {
+
+  const initAnimations = () => {
     gsap.from(background.value.wrapper, {scale: 1.2, duration: 3});
+
     gsap.from(ourNames.value.wrapper, {
       scale: 0,
       opacity: 0,
       duration: 3,
       ease: 'back.out'
     });
+
     setTimeout(() => {
       ourNamesMouseAnimationEnabled.value = true;
     }, 3000);
   };
 
-  onMounted(() => {
-    nextTick(animate);
-  });
+  onMounted(initAnimations);
 </script>
 
 <template>
