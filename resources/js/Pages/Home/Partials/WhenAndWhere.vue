@@ -20,7 +20,8 @@
         scrub: 1,
         end: 'top top'
       },
-      yPercent: -600
+      opacity: 0,
+      yPercent: -300
     });
     gsap.from(partyCard.value.card, {
       scrollTrigger: {
@@ -52,9 +53,9 @@
         scrollTrigger: {
           trigger: partyCard.value.card,
           scrub: 1,
-          start: 'bottom center'
+          start: '90% center'
         },
-        x: '-50vw',
+        x: '-30vw',
         rotate: '-90deg',
         transformOrigin: 'bottom left'
       }
@@ -73,9 +74,9 @@
         scrollTrigger: {
           trigger: accomCard.value.card,
           scrub: 1,
-          start: 'bottom center'
+          start: '90% center'
         },
-        x: '50vw',
+        x: '30vw',
         rotate: '90deg',
         transformOrigin: 'bottom right'
       }
@@ -92,73 +93,74 @@
     id="whenAndWhere"
     ref="section"
     has-header
-    has-footer
     class="flex flex-col justify-center items-center"
   >
     <PageHeading ref="heading">
       <h2>When &amp; Where</h2>
     </PageHeading>
 
-    <div
-      class="container flex flex-col md:flex-row justify-center items-center md:items-stretch space-y-6 md:space-y-0 md:space-x-6 lg:space-x-14"
-    >
-      <FancyCard ref="partyCard" raised class="w-full max-w-sm">
-        <div class="h-full flex flex-col justify-between items-center text-lg">
-          <h3 class="mb-6 md:text-2xl">The Party</h3>
+    <div class="grow w-full flex justify-center items-center">
+      <div
+        class="container flex flex-col md:flex-row justify-center items-center md:items-stretch space-y-6 md:space-y-0 md:space-x-6 lg:space-x-14"
+      >
+        <FancyCard ref="partyCard" raised class="w-full max-w-sm">
+          <div class="h-full flex flex-col justify-between items-center text-lg">
+            <h3 class="mb-6 md:text-2xl">The Party</h3>
 
-          <div class="text-center">
-            <p class="mb-6">
-              165 Hardvard Avenue <br />
-              Rockville Centre <br />
-              New York
-            </p>
-            <p class="mb-6">
-              September 16, 2023 <br />
-              2:00PM
-            </p>
-            <p class="mb-6">
-              Cocktail attire, <br />
-              blue encouraged
-            </p>
+            <div class="text-center">
+              <p class="mb-6">
+                165 Hardvard Avenue <br />
+                Rockville Centre <br />
+                New York
+              </p>
+              <p class="mb-6">
+                September 16, 2023 <br />
+                2:00PM
+              </p>
+              <p class="mb-6">
+                Cocktail attire, <br />
+                blue encouraged
+              </p>
+            </div>
+
+            <ThemeButton
+              variant="secondary"
+              href="https://goo.gl/maps/VKh7dQUHpm4c1h1D7"
+              target="_blank"
+              external
+            >
+              Directions
+            </ThemeButton>
           </div>
+        </FancyCard>
 
-          <ThemeButton
-            variant="secondary"
-            href="https://goo.gl/maps/VKh7dQUHpm4c1h1D7"
-            target="_blank"
-            external
-          >
-            Directions
-          </ThemeButton>
-        </div>
-      </FancyCard>
+        <FancyCard ref="accomCard" raised class="w-full max-w-sm">
+          <div class="h-full flex flex-col justify-between items-center text-lg">
+            <h3 class="mb-6 md:text-2xl">Accomadations</h3>
 
-      <FancyCard ref="accomCard" raised class="w-full max-w-sm">
-        <div class="h-full flex flex-col justify-between items-center text-lg">
-          <h3 class="mb-6 md:text-2xl">Accomadations</h3>
+            <div class="text-center">
+              <p class="mb-6">
+                Hampton Inn & <br class="" />
+                Suites Rockville Centre
+              </p>
+              <p class="mb-6">
+                125 Merrick Road <br />
+                Rockville Centre <br />
+                New York
+              </p>
+            </div>
 
-          <div class="text-center">
-            <p class="mb-6">
-              Hampton Inn & <br class="" />
-              Suites Rockville Centre
-            </p>
-            <p class="mb-6">
-              125 Merrick Road <br />
-              Rockville Centre <br />
-              New York
-            </p>
+            <ThemeButton
+              variant="secondary"
+              href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=RVCNYHX&groupCode=CHHZBW&arrivaldate=2023-09-13&departuredate=2023-09-19&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT"
+              target="_blank"
+              external
+            >
+              Book
+            </ThemeButton>
           </div>
-
-          <ThemeButton
-            variant="secondary"
-            href="https://www.hilton.com/en/book/reservation/deeplink/?ctyhocn=RVCNYHX&groupCode=CHHZBW&arrivaldate=2023-09-13&departuredate=2023-09-19&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT"
-            target="_blank"
-            external
-          >
-            Book
-          </ThemeButton>
-        </div>
-      </FancyCard>
+        </FancyCard>
+      </div>
     </div>
   </PageSection>
 </template>
