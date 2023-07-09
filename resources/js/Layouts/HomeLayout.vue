@@ -101,20 +101,20 @@
       </ul>
     </nav>
 
-    <Transition
-      enter-active-class="transition ease-out duration-500"
-      enter-from-class="opacity-0"
-      enter-to-class="opacity-100"
-      leave-active-class="transition ease-in duration-500"
-      leave-from-class="opacity-100"
-      leave-to-class="opacity-0"
-      appear
-      mode="out-in"
-    >
-      <main class="grow">
+    <main class="grow">
+      <Transition
+        enter-active-class="transition ease-out duration-500"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition ease-in duration-500"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
+        appear
+        mode="out-in"
+      >
         <slot />
-      </main>
-    </Transition>
+      </Transition>
+    </main>
 
     <footer class="w-full h-16 z-40 absolute bottom-0 left-0 flex justify-center items-end">
       <div ref="footerGradient" class="absolute w-full h-16 top-0 left-0">
