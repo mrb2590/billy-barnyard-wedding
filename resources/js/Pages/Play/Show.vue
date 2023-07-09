@@ -53,16 +53,16 @@
         mode="out-in"
       >
         <FancyCard v-if="!showGame" class="mb-8 max-w-lg mx-auto text-center">
-          <h2 class="mb-6 md:text-2xl">How to Play</h2>
-          <p class="mb-6">
+          <p class="mb-6 text-xl">
             While we wait for our wedding day to come, enjoy a game where Alex tries to backflip her
             way through our marriage!
           </p>
+          <h2 class="mb-6 text-xl md:text-2xl">How to Play</h2>
           <p class="mb-6">
             This is a take on Flappy Bird. Once the game starts, Bill will start falling so you must
-            tap, click, or use the space key to keep Bill in the air. As Bill flies through the
-            level, you must fly Bill through the openings. Good luck, you will need it. You can
-            always play the game at the standalone site,
+            tap, click, or use the space key to keep Bill in the air. As the pipes approach Bill,
+            you must fly Bill through the openings. Good luck, you will need it. You can always play
+            the game at the standalone site,
             <ThemeLink href="https://flippy-bill.buonomo.net" external>
               https://flippy-bill.buonomo.net</ThemeLink
             >.
@@ -72,7 +72,7 @@
 
         <div v-else class="mb-8 w-full h-full aspect-[16/9] max-w-6xl">
           <iframe
-            class="w-full h-full relative shadow-default"
+            class="w-full h-full relative raised"
             src="https://flippy-bill.buonomo.net"
             frameborder="0"
             scrolling="no"
