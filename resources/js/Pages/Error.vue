@@ -54,7 +54,7 @@
   >
     <div class="h-screen w-full flex flex-col justify-center items-center p-6">
       <ApplicationLogo class="w-8 h-8 mb-4" />
-      <OurNames :animate="true" type="short" class="text-6xl mb-6" />
+      <OurNames animate type="short" class="text-6xl mb-6" />
       <h1 class="text-2xl mb-4">{{ props.status }} {{ title }}</h1>
       <div class="max-w-lg text-center mb-8">
         {{ description }}

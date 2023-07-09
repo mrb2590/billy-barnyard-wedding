@@ -3,8 +3,8 @@
 
   import FancyCard from '@/Components/FancyCard.vue';
   import PageHeading from '@/Components/PageHeading.vue';
+  import PageSection from '@/Components/PageSection.vue';
   import {getOurStoryEvents} from '@/Data/our-story-events';
-  import PageSection from '@/Pages/Home/Partials/PageSection.vue';
 
   import BoardPhoto from './BoardPhoto.vue';
   import WoodBoard from './WoodBoard.vue';
@@ -78,7 +78,7 @@
       <div v-for="(event, i) in events" :key="i" class="mb-16 w-full max-w-xl">
         <FancyCard raised :title="event.year">
           <div class="grow flex flex-col justify-center items-center text-lg">
-            <h3 class="mb-6 md:text-2xl">{{ event.title }}</h3>
+            <h3 class="mb-6 text-xl md:text-2xl">{{ event.title }}</h3>
             <p v-if="event.description">
               {{ event.description }}
             </p>

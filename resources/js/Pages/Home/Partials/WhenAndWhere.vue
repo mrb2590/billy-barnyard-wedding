@@ -3,8 +3,8 @@
 
   import FancyCard from '@/Components/FancyCard.vue';
   import PageHeading from '@/Components/PageHeading.vue';
+  import PageSection from '@/Components/PageSection.vue';
   import ThemeButton from '@/Components/ThemeButton.vue';
-  import PageSection from '@/Pages/Home/Partials/PageSection.vue';
 
   const gsap = inject('gsap');
 
@@ -109,7 +109,7 @@
       >
         <FancyCard ref="partyCard" raised class="w-full max-w-sm">
           <div class="h-full flex flex-col justify-between items-center text-lg">
-            <h3 class="mb-6 md:text-2xl">The Party</h3>
+            <h3 class="mb-6 text-xl md:text-2xl">The Party</h3>
 
             <div class="text-center">
               <p class="mb-6">
@@ -140,7 +140,7 @@
 
         <FancyCard ref="accomCard" raised class="w-full max-w-sm">
           <div class="h-full flex flex-col justify-between items-center text-lg">
-            <h3 class="mb-6 md:text-2xl">Accomadations</h3>
+            <h3 class="mb-6 text-xl md:text-2xl">Accomadations</h3>
 
             <div class="text-center">
               <p class="mb-6">
