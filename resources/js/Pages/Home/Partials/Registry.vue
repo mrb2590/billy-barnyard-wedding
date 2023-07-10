@@ -4,6 +4,7 @@
 
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import FancyCard from '@/Components/FancyCard.vue';
+  import ImageObject from '@/Components/ImageObject.vue';
   import PageHeading from '@/Components/PageHeading.vue';
   import PageSection from '@/Components/PageSection.vue';
   import ThemeButton from '@/Components/ThemeButton.vue';
@@ -84,29 +85,36 @@
     has-footer
     class="flex flex-col justify-center items-center"
   >
-    <BackgroundImage image="she-said-yes" end="bottom center" bg-size="bg-[10%_30%]" animate />
+    <BackgroundImage image="she-said-yes" end="bottom bottom" bg-size="bg-[10%_30%]" animate />
 
     <div class="flex flex-col justify-center items-center">
       <PageHeading ref="heading">
         <h2>Registry</h2>
       </PageHeading>
 
-      <FancyCard ref="registryCard" raised class="w-full max-w-sm mb-6">
-        <div class="h-full flex flex-col justify-between items-center text-lg">
+      <FancyCard ref="registryCard" raised class="w-full max-w-md mb-6">
+        <div class="h-full flex flex-col justify-between items-center">
           <div class="text-center">
             <p class="mb-6">
-              If you are so inclined to bless us with a gift, we created a registry at Williams
-              Sonoma.
+              We are lucky to have what we need and more, however if you'd like to give us a gift,
+              please consider contributing to our kitchen remodel fund. We are very thankful for
+              anything.
+            </p>
+            <p class="mb-6">
+              For convenience, you may scan the QR Code or click the button below to see our Venmo
+              account.
             </p>
           </div>
 
+          <ImageObject image="venmo-qrcode" class="mb-6" />
+
           <ThemeButton
             variant="secondary"
-            href="https://www.williams-sonoma.com/"
+            href="https://venmo.com/u/Mike-Buonomo-1"
             target="_blank"
             external
           >
-            Our Registry
+            Venmo
           </ThemeButton>
         </div>
       </FancyCard>

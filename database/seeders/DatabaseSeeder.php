@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Party;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -24,5 +25,11 @@ class DatabaseSeeder extends Seeder
         print "\r\n\tAPI Test Token: ";
         print $user->createToken('Test')->plainTextToken;
         print "\r\n\r\n";
+
+        for ($i = 0; $i < 100; $i++) {
+            Party::factory()
+                ->withGuests()
+                ->create();
+        }
     }
 }

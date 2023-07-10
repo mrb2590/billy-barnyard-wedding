@@ -61,6 +61,10 @@
         title: 'Registry'
       },
       {
+        title: 'RSVP',
+        href: route('party-search.create')
+      },
+      {
         title: 'Play',
         href: route('play')
       }

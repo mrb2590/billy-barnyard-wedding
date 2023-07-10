@@ -3,6 +3,8 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaviconController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PartyController;
+use App\Http\Controllers\PartySearchController;
 use App\Http\Controllers\PlayController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebAppManifestController;
@@ -26,6 +28,16 @@ Route::get('/play', [PlayController::class, 'show'])->name('play');
 Route::get('/favicon.ico', [FaviconController::class, 'show']);
 
 Route::get('/site.webmanifest', [WebAppManifestController::class, 'show']);
+
+Route::get('/rsvp', [PartySearchController::class, 'create'])->name('party-search.create');
+Route::post('/rsvp', [PartySearchController::class, 'store'])->name('party-search.store');
+
+Route::middleware(['party.verify'])
+    ->whereUuid(['party'])
+    ->group(function () {
+        Route::get('/parties/{party}', [PartyController::class, 'edit'])->name('party.edit');
+        Route::patch('/parties/{party}', [PartyController::class, 'update'])->name('party.update');
+    });
 
 Route::get('/dashboard', [DashboardController::class, 'show'])
     ->middleware(['auth', 'verified'])

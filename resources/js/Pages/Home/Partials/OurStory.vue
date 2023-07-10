@@ -21,7 +21,7 @@
       scrollTrigger: {
         trigger: section.value.section,
         start: 'top top',
-        end: 'bottom top',
+        end: 'bottom center',
         pin: boardsContainer.value
       }
     });
