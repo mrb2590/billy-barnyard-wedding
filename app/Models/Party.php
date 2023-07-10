@@ -18,7 +18,7 @@ class Party extends Model
      *
      * @var array<integer, string>
      */
-    protected $fillable = ['name', 'address', 'message_to_party', 'message_from_party', 'notes'];
+    protected $fillable = ['name', 'address', 'message_to_party', 'message_from_party', 'notes', 'rsvp_code'];
 
     /**
      * The "booted" method of the model.

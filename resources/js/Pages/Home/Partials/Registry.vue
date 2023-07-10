@@ -85,7 +85,7 @@
     has-footer
     class="flex flex-col justify-center items-center"
   >
-    <BackgroundImage image="she-said-yes" end="bottom center" bg-size="bg-[10%_30%]" animate />
+    <BackgroundImage image="she-said-yes" end="bottom bottom" bg-size="bg-[10%_30%]" animate />
 
     <div class="flex flex-col justify-center items-center">
       <PageHeading ref="heading">
@@ -97,10 +97,12 @@
           <div class="text-center">
             <p class="mb-6">
               We are lucky to have what we need and more, however if you'd like to give us a gift,
-              please consider donating to our kitchen remodel fund.
+              please consider contributing to our kitchen remodel fund. We are very thankful for
+              anything.
             </p>
             <p class="mb-6">
-              You can scan the QR Code or click the button below to see our Venmo account.
+              For convenience, you may scan the QR Code or click the button below to see our Venmo
+              account.
             </p>
           </div>
 

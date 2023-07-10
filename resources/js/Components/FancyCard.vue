@@ -47,7 +47,7 @@
           class="flex flex-col justify-center items-center mb-6 space-y-6"
         >
           <ApplicationLogo class="w-8 h-8" />
-          <OurNames animate type="short" class="text-6xl" />
+          <OurNames type="short" class="text-6xl" />
         </Link>
       </div>
       <slot />

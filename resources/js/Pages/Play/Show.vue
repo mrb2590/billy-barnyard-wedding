@@ -54,10 +54,10 @@
           </p>
           <h2 class="mb-6 text-xl md:text-2xl">How to Play</h2>
           <p class="mb-6">
-            This is a take on Flappy Bird. Once the game starts, Bill will start falling so you must
-            tap, click, or use the space key to keep Bill in the air. As the pipes approach Bill,
-            you must fly Bill through the openings. Good luck, you will need it. You can always play
-            the game at the standalone site,
+            This is a take on Flappy Bird. Once the game starts, Flippy Bill will start falling so
+            you must tap, click, or use the space key to keep her in the air. As the pipes approach
+            Flippy Bill, you must fly her through the openings. Good luck, you will need it. You can
+            always play the game at the standalone site,
             <ThemeLink href="https://flippy-bill.buonomo.net" external>
               https://flippy-bill.buonomo.net</ThemeLink
             >.

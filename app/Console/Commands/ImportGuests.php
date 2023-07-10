@@ -47,7 +47,8 @@ class ImportGuests extends Command
                 'name' => trim($row[$columns['party_name']]) ?: null,
                 'address' => $address,
                 'message_to_party' => trim($row[$columns['party_message_to_party']]) ?: null,
-                'notes' => trim($row[$columns['party_notes']]) ?: null
+                'notes' => trim($row[$columns['party_notes']]) ?: null,
+                'rsvp_code' => trim($row[$columns['party_rsvp_code']]) ?: null
             ]);
 
             $guest = $party->guests()->create([

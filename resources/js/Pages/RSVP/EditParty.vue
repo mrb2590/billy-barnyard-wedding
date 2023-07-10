@@ -99,12 +99,12 @@
                 class="w-full"
               >
                 <p class="mb-6">
-                  We would like to invite you to a welcome dinner on Friday, September 15th at the
-                  same address.
+                  We would like to invite you to a welcome dinner on Friday, September 15th, 6:00pm
+                  at the same address as the party.
                 </p>
-                <InputLabel class="mb-2" value="Welcome Dinner" />
+                <InputLabel value="Welcome Dinner" />
                 <div
-                  class="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-between items-center mb-6"
+                  class="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-between items-center mb-6 mt-2"
                 >
                   <RadioButton
                     v-model:checked="
@@ -129,9 +129,9 @@
                 </div>
               </div>
 
-              <InputLabel :for="`guest${guest.id}Accept`" class="mb-2" value="The Party" />
+              <InputLabel :for="`guest${guest.id}Accept`" value="The Party" />
               <div
-                class="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-between items-center mb-6"
+                class="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-between items-center mb-6 mt-2"
               >
                 <RadioButton
                   v-model:checked="form.guests.find((g) => g.id === guest.id).is_attending"
@@ -161,6 +161,7 @@
 
         <FancyCard v-else animate raised class="w-full max-w-md text-center">
           <h2 class="mb-6 text-xl">Thank you</h2>
+          <p class="mb-4">We have recieved your RSVP.</p>
           <p>
             You may come back to update your RSVP at any time if necessarry, so please keep your
             RSVP code handy.
