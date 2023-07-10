@@ -69,9 +69,9 @@
         <p class="mb-10 text-center">
           If you have any issues using the website to RSVP, you can email us instead at
           <ThemeLink
-            href="mailto:wedding@buonomon.net?subject=RSVP%20for%20the%20Billy%20Barnyard%20Wedding"
+            href="mailto:billybarnyard@buonomon.net?subject=RSVP%20for%20the%20Billy%20Barnyard%20Wedding"
             external
-            >wedding@buonomo.net</ThemeLink
+            >billybarnyard@buonomo.net</ThemeLink
           >.
         </p>
 
