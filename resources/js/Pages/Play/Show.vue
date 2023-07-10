@@ -1,6 +1,6 @@
 <script setup>
   import {Head} from '@inertiajs/vue3';
-  import {inject, onMounted, ref} from 'vue';
+  import {ref} from 'vue';
 
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import FancyCard from '@/Components/FancyCard.vue';
@@ -12,21 +12,17 @@
 
   defineOptions({layout: HomeLayout});
 
-  const gsap = inject('gsap');
   const section = ref();
-  const heading = ref();
   const showGame = ref(false);
-
-  onMounted(() => {
-    gsap.from(heading.value.heading, {
-      opacity: 0,
-      yPercent: -300
-    });
-  });
 </script>
 
 <template>
-  <PageSection ref="section" class="flex flex-col justify-center items-center">
+  <PageSection
+    ref="section"
+    has-header
+    has-footer
+    class="flex flex-col justify-center items-center"
+  >
     <Head title="Play">
       <meta
         head-key="description"
@@ -38,7 +34,7 @@
     <BackgroundImage image="flowers" />
 
     <div class="relative w-full flex flex-col flex-center items-center">
-      <PageHeading ref="heading">
+      <PageHeading animate>
         <h1>Flippy Bill</h1>
       </PageHeading>
 
@@ -49,10 +45,9 @@
         leave-active-class="transition ease-in duration-500"
         leave-from-class="opacity-100"
         leave-to-class="opacity-0"
-        appear
         mode="out-in"
       >
-        <FancyCard v-if="!showGame" class="mb-8 max-w-lg mx-auto text-center">
+        <FancyCard v-if="!showGame" animate raised logo class="mb-8 !max-w-lg mx-auto text-center">
           <p class="mb-6 text-xl">
             While we wait for our wedding day to come, enjoy a game where Alex tries to backflip her
             way through our marriage!

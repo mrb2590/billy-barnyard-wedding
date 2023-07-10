@@ -1,4 +1,4 @@
-import {onMounted, onUnmounted} from 'vue';
+import {onUnmounted} from 'vue';
 
 export const animateMousePerspective = (gsap, elRef) => {
   return {
@@ -45,7 +45,7 @@ export const animateMousePerspective = (gsap, elRef) => {
 
       this.setScreenCenter();
 
-      onMounted(this.addEventListeners.bind(this));
+      this.addEventListeners.bind(this);
       onUnmounted(this.removeEventListeners.bind(this));
     }
   };
