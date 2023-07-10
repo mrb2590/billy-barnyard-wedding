@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Party;
-use App\Rules\VerifyRSVPCodeTOGuest;
+use App\Rules\VerifyRSVPCodeToGuest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -33,7 +33,7 @@ class PartyController extends Controller
     {
         $this->validate($request, [
             'guests' => ['required', 'array'],
-            'guests.*.id' => ['required', 'uuid', new VerifyRSVPCodeTOGuest()],
+            'guests.*.id' => ['required', 'uuid', new VerifyRSVPCodeToGuest()],
             'guests.*.is_attending_rehearsal' => ['sometimes', 'nullable', 'boolean'],
             'guests.*.is_attending' => ['required', 'boolean']
         ]);
