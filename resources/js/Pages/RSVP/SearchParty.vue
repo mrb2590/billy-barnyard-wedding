@@ -63,11 +63,11 @@
     <FancyCard animate logo raised class="w-full max-w-md">
       <form @submit.prevent="submit">
         <p class="mb-4 text-center">
-          Enter you last name and the RSVP code found on your invitation, under the QR code. You may
+          Enter your last name and the RSVP code found under the QR code on your invitation. You may
           RSVP for all guests in your party.
         </p>
         <p class="mb-10 text-center">
-          If you have any issues using the website to RSVP, you can email us instead at
+          If you have any issues using the website to RSVP, please send us an email at
           <ThemeLink
             href="mailto:billybarnyard@buonomon.net?subject=RSVP%20for%20the%20Billy%20Barnyard%20Wedding"
             external
@@ -83,7 +83,6 @@
             type="text"
             class="mt-1 block w-full"
             autocomplete="family-name"
-            placeholder="Einhorn"
             :error="form.errors.last_name"
             required
           />
@@ -97,7 +96,6 @@
             v-model="form.rsvp_code"
             type="text"
             class="mt-1 block w-full uppercase"
-            placeholder="SEPT16"
             pattern="^[a-zA-Z0-9]{6}$"
             required
             :error="form.errors.rsvp_code"
