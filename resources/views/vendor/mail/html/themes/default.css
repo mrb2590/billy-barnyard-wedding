@@ -256,11 +256,11 @@ img {
 
 .button-blue,
 .button-primary {
-  background-color: #0f172a;
-  border-bottom: 14px solid #0f172a;
-  border-left: 26px solid #0f172a;
-  border-right: 26px solid #0f172a;
-  border-top: 14px solid #0f172a;
+  background-color: #334155;
+  border-bottom: 14px solid #334155;
+  border-left: 26px solid #334155;
+  border-right: 26px solid #334155;
+  border-top: 14px solid #334155;
 }
 
 .button-green,

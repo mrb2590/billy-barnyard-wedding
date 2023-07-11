@@ -38,7 +38,7 @@
     <BackgroundImage
       ref="background"
       image="alex-mike-engagement"
-      bg-size="bg-[21%_30%]"
+      bg-position="bg-[21%_30%]"
       start="top top"
       animate
     />

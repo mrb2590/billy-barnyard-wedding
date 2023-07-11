@@ -13,8 +13,8 @@
   });
 
   const section = ref();
-  const paddingTop = props.hasHeader ? 'pt-36' : 'pt-6';
-  const paddingBottom = props.hasFooter ? 'pb-20' : 'pb-6';
+  const paddingTop = props.hasHeader ? 'pt-20 sm:pt-36' : 'pt-8';
+  const paddingBottom = props.hasFooter ? 'pb-20' : 'pb-8';
 
   defineExpose({section});
 </script>
@@ -22,7 +22,7 @@
 <template>
   <section
     ref="section"
-    class="relative h-full min-h-screen w-full overflow-hidden px-6"
+    class="relative h-full min-h-screen w-full overflow-hidden px-8"
     :class="`${paddingTop} ${paddingBottom}`"
   >
     <slot />

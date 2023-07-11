@@ -69,7 +69,7 @@
     <div
       id="ourStory"
       ref="storyContainer"
-      class="relative z-20 mt-[calc(100vh_-_9rem)] flex w-full flex-col items-center justify-center pt-36 text-center"
+      class="relative z-20 mt-[calc(100vh_-_9rem)] flex w-full flex-col items-center justify-center pt-20 text-center sm:pt-36"
     >
       <PageHeading ref="heading">
         <h2>Our Story</h2>

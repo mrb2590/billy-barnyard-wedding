@@ -52,7 +52,7 @@
 <template>
   <div
     ref="board"
-    class="relative aspect-11 h-[22vh] bg-center bg-repeat raised"
+    class="relative aspect-11 h-[22vh] min-h-[12rem] bg-center bg-repeat raised"
     :style="{
       backgroundImage: `url(${images.x3})`,
       backgroundImage: `image-set(url(${images.x1}) 1x, url(${images.x2}) 2x, url(${images.x3}) 3x)`,

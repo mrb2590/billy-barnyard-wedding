@@ -5,7 +5,7 @@
   const props = defineProps({
     href: {
       type: String,
-      required: true
+      default: null
     },
     active: {
       type: Boolean

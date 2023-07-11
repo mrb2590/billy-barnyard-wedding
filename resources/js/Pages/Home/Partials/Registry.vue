@@ -85,7 +85,7 @@
     has-footer
     class="flex flex-col items-center justify-center"
   >
-    <BackgroundImage image="she-said-yes" end="bottom bottom" bg-size="bg-[10%_30%]" animate />
+    <BackgroundImage image="she-said-yes" end="bottom bottom" bg-position="bg-[10%_30%]" animate />
 
     <div class="flex flex-col items-center justify-center">
       <PageHeading ref="heading">

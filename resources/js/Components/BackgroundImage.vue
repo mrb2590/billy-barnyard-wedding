@@ -8,9 +8,9 @@
       type: String,
       required: true
     },
-    bgSize: {
+    bgPosition: {
       type: String,
-      default: null
+      default: 'bg-center'
     },
     start: {
       type: String,
@@ -62,7 +62,7 @@
     <div
       ref="backgroundImage"
       class="w-full bg-cover bg-fixed bg-no-repeat"
-      :class="`${bgSize} ${bgHeight}`"
+      :class="`${props.bgPosition} ${bgHeight}`"
       :style="{
         backgroundImage: `url(${images.x3})`,
         backgroundImage: `image-set(url(${images.x1}) 1x, url(${images.x2}) 2x, url(${images.x3}) 3x)`,
