@@ -60,7 +60,7 @@
     ref="section"
     has-header
     has-footer
-    class="flex flex-col justify-center items-center"
+    class="flex flex-col items-center justify-center"
   >
     <Head title="RSVP">
       <meta
@@ -72,7 +72,7 @@
 
     <BackgroundImage image="flowers" />
 
-    <div class="relative w-full flex flex-col flex-center items-center">
+    <div class="flex-center relative flex w-full flex-col items-center">
       <PageHeading animate>
         <h1>RSVP</h1>
       </PageHeading>
@@ -104,7 +104,7 @@
                 </p>
                 <InputLabel value="Welcome Dinner" />
                 <div
-                  class="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-between items-center mb-6 mt-2"
+                  class="mb-6 mt-2 flex w-full flex-col items-center justify-between space-y-4 md:flex-row md:space-x-4 md:space-y-0"
                 >
                   <RadioButton
                     v-model:checked="
@@ -131,7 +131,7 @@
 
               <InputLabel :for="`guest${guest.id}Accept`" value="The Party" />
               <div
-                class="w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-between items-center mb-6 mt-2"
+                class="mb-6 mt-2 flex w-full flex-col items-center justify-between space-y-4 md:flex-row md:space-x-4 md:space-y-0"
               >
                 <RadioButton
                   v-model:checked="form.guests.find((g) => g.id === guest.id).is_attending"

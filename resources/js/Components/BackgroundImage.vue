@@ -58,10 +58,10 @@
 </script>
 
 <template>
-  <div ref="wrapper" class="absolute top-0 left-0 h-full w-full overflow-hidden z-0">
+  <div ref="wrapper" class="absolute left-0 top-0 z-0 h-full w-full overflow-hidden">
     <div
       ref="backgroundImage"
-      class="w-full bg-fixed bg-no-repeat bg-cover"
+      class="w-full bg-cover bg-fixed bg-no-repeat"
       :class="`${bgSize} ${bgHeight}`"
       :style="{
         backgroundImage: `url(${images.x3})`,
@@ -69,6 +69,6 @@
         backgroundImage: `-webkit-image-set(url(${images.x1}) 1x, url(${images.x2}) 2x, url(${images.x3}) 3x)`
       }"
     />
-    <div class="absolute top-0 left-0 w-full h-full bg-black/30" />
+    <div class="absolute left-0 top-0 h-full w-full bg-black/30" />
   </div>
 </template>

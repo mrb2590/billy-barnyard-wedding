@@ -52,7 +52,7 @@
 <template>
   <div
     ref="board"
-    class="raised bg-center bg-repeat relative h-[22vh] aspect-11"
+    class="relative aspect-11 h-[22vh] bg-center bg-repeat raised"
     :style="{
       backgroundImage: `url(${images.x3})`,
       backgroundImage: `image-set(url(${images.x1}) 1x, url(${images.x2}) 2x, url(${images.x3}) 3x)`,
@@ -60,10 +60,10 @@
     }"
   >
     <div
-      class="w-full h-full flex flex-row flex-nowrap justify-between items-center p-10 relative shadow-[inset_0_0_20px_20px_rgba(0,0,0,0.5)]"
+      class="relative flex h-full w-full flex-row flex-nowrap items-center justify-between p-10 shadow-[inset_0_0_20px_20px_rgba(0,0,0,0.5)]"
     >
       <slot />
-      <div class="absolute top-0 left-0 w-full h-full bg-black/30" />
+      <div class="absolute left-0 top-0 h-full w-full bg-black/30" />
     </div>
   </div>
 </template>

@@ -77,16 +77,16 @@
 </script>
 
 <template>
-  <div class="relative min-h-screen w-full h-full flex flex-col">
-    <nav class="fixed top-0 left-0 w-full h-24 mb-6 z-40 flex flex-row items-center justify-center">
-      <div ref="headerGradient" class="absolute w-full h-36 top-0 left-0">
-        <div class="absolute w-full h-36 top-0 left-0 bg-gradient-to-b from-primary-950/80 z-30" />
+  <div class="relative flex h-full min-h-screen w-full flex-col">
+    <nav class="fixed left-0 top-0 z-40 mb-6 flex h-24 w-full flex-row items-center justify-center">
+      <div ref="headerGradient" class="absolute left-0 top-0 h-36 w-full">
+        <div class="absolute left-0 top-0 z-30 h-36 w-full bg-gradient-to-b from-primary-950/80" />
         <div
-          class="absolute w-full h-36 top-0 left-0 bg-gradient-to-b from-primary-950 blur-mask z-30"
+          class="absolute left-0 top-0 z-30 h-36 w-full bg-gradient-to-b from-primary-950 blur-mask"
         />
       </div>
 
-      <ul class="container flex flex-row justify-center space-x-6 items-center relative z-40 p-6">
+      <ul class="container relative z-40 flex flex-row items-center justify-center space-x-6 p-6">
         <li v-for="(navLink, i) in navLinks" :key="i" ref="links">
           <ThemeButton
             variant="nav"
@@ -120,20 +120,20 @@
       </Transition>
     </main>
 
-    <footer class="w-full h-16 z-40 absolute bottom-0 left-0 flex justify-center items-end">
-      <div ref="footerGradient" class="absolute w-full h-16 top-0 left-0">
+    <footer class="absolute bottom-0 left-0 z-40 flex h-16 w-full items-end justify-center">
+      <div ref="footerGradient" class="absolute left-0 top-0 h-16 w-full">
         <div
-          class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-primary-950/80 z-30"
+          class="absolute left-0 top-0 z-30 h-full w-full bg-gradient-to-t from-primary-950/80"
         />
         <div
-          class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-primary-950 blur-mask-reverse z-30"
+          class="absolute left-0 top-0 z-30 h-full w-full bg-gradient-to-t from-primary-950 blur-mask-reverse"
         />
       </div>
 
-      <div ref="footerText" class="text-shadow-default text-center relative z-40 px-6 pt-6 pb-3">
+      <div ref="footerText" class="relative z-40 px-6 pb-3 pt-6 text-center text-shadow-default">
         Created by the
         <ThemeLink href="https://mike.buonomo.net" target="_blank" external>Groom</ThemeLink>
-        <ApplicationLogo class="w-3 h-3 inline-block mx-2 align-baseline" />
+        <ApplicationLogo class="mx-2 inline-block h-3 w-3 align-baseline" />
         <ThemeLink v-if="$page.props.auth.user" :href="route('dashboard')">Dashboard</ThemeLink>
         <ThemeLink v-else :href="route('login')">Login</ThemeLink>
       </div>

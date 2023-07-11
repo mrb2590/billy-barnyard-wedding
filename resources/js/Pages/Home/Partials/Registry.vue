@@ -83,17 +83,17 @@
     ref="section"
     has-header
     has-footer
-    class="flex flex-col justify-center items-center"
+    class="flex flex-col items-center justify-center"
   >
     <BackgroundImage image="she-said-yes" end="bottom bottom" bg-size="bg-[10%_30%]" animate />
 
-    <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-col items-center justify-center">
       <PageHeading ref="heading">
         <h2>Registry</h2>
       </PageHeading>
 
-      <FancyCard ref="registryCard" raised class="w-full max-w-md mb-6">
-        <div class="h-full flex flex-col justify-between items-center">
+      <FancyCard ref="registryCard" raised class="mb-6 w-full max-w-md">
+        <div class="flex h-full flex-col items-center justify-between">
           <div class="text-center">
             <p class="mb-6">
               We are lucky to have what we need and more, however if you'd like to give us a gift,
@@ -119,13 +119,13 @@
         </div>
       </FancyCard>
 
-      <div class="flex flex-wrap justify-center items-center mb-6">
+      <div class="mb-6 flex flex-wrap items-center justify-center">
         <div
           v-for="(value, field) in countdownDuration"
           v-show="countdownDuration[field] || field === 'seconds'"
           :key="field"
           ref="countdownNumber"
-          class="flex justify-center items-center flex-col p-3"
+          class="flex flex-col items-center justify-center p-3"
         >
           <div class="heading-text text-2xl">{{ value }}</div>
           <div class="text-lg">{{ field }}</div>

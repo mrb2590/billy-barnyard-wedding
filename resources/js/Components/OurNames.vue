@@ -40,21 +40,21 @@
 </script>
 
 <template>
-  <div ref="wrapper" class="uppercase font-primary not-italic origin-center whitespace-nowrap">
+  <div ref="wrapper" class="origin-center whitespace-nowrap font-primary uppercase not-italic">
     <span
       v-if="['short', 'both'].includes(props.type)"
-      class="flex flex-row justify-center items-center"
+      class="flex flex-row items-center justify-center"
       :class="{'md:hidden': props.type === 'both'}"
     >
-      A<span class="mx-[0.2em] w-[0.1em] border-l-[0.05em] border-l-current h-[1em]" />M
+      A<span class="mx-[0.2em] h-[1em] w-[0.1em] border-l-[0.05em] border-l-current" />M
     </span>
     <span
       v-if="['long', 'both'].includes(props.type)"
-      class="flex flex-row justify-center items-center relative"
+      class="relative flex flex-row items-center justify-center"
       :class="{'hidden md:flex': props.type === 'both'}"
     >
       <span class="z-10">Alexandra</span>
-      <span class="-mx-[0.175em] text-primary-300 text-[3em] z-0">&amp;</span>
+      <span class="z-0 -mx-[0.175em] text-[3em] text-primary-300">&amp;</span>
       <span class="z-10">Michael</span>
     </span>
   </div>

@@ -12,23 +12,23 @@
 </script>
 
 <template>
-  <div class="min-h-screen relative w-full h-full pt-16">
+  <div class="relative h-full min-h-screen w-full pt-16">
     <BackgroundImage image="flowers" start="top top" />
 
     <nav
-      class="fixed z-20 top-0 left-0 w-full h-16"
+      class="fixed left-0 top-0 z-20 h-16 w-full"
       :class="{'bg-primary-950': showingNavigationDropdown}"
     >
-      <div class="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-primary-950/80 z-0" />
-      <div class="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-primary-950 z-0" />
-      <div class="absolute w-full h-full top-0 left-0 blur-mask z-0" />
+      <div class="absolute left-0 top-0 z-0 h-full w-full bg-gradient-to-b from-primary-950/80" />
+      <div class="absolute left-0 top-0 z-0 h-full w-full bg-gradient-to-b from-primary-950" />
+      <div class="absolute left-0 top-0 z-0 h-full w-full blur-mask" />
 
       <!-- Primary Navigation Menu -->
-      <div class="container mx-auto px-6 relative">
-        <div class="flex justify-between h-16">
+      <div class="container relative mx-auto px-6">
+        <div class="flex h-16 justify-between">
           <div class="flex">
             <!-- Logo -->
-            <div class="shrink-0 flex items-center">
+            <div class="flex shrink-0 items-center">
               <ThemeButton :href="route('home')" variant="nav">
                 <OurNames type="short" />
               </ThemeButton>
@@ -46,9 +46,9 @@
             </div>
           </div>
 
-          <div class="hidden sm:flex sm:items-center sm:ml-6">
+          <div class="hidden sm:ml-6 sm:flex sm:items-center">
             <!-- Settings Dropdown -->
-            <div class="ml-3 relative">
+            <div class="relative ml-3">
               <Dropdown align="right" width="48">
                 <template #trigger>
                   <span class="inline-flex rounded-md">
@@ -56,7 +56,7 @@
                       {{ $page.props.auth.user.name }}
 
                       <svg
-                        class="ml-2 -mr-0.5 h-4 w-4"
+                        class="-mr-0.5 ml-2 h-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
@@ -126,9 +126,9 @@
       >
         <div
           v-show="showingNavigationDropdown"
-          class="sm:hidden bg-white top-16 left-0 w-full h-[calc(100vh_-_4rem)] z-40"
+          class="left-0 top-16 z-40 h-[calc(100vh_-_4rem)] w-full bg-white sm:hidden"
         >
-          <div class="pt-2 pb-3 space-y-1">
+          <div class="space-y-1 pb-3 pt-2">
             <ResponsiveNavLink
               :href="route('dashboard')"
               :active="route().current('dashboard')"
@@ -139,7 +139,7 @@
           </div>
 
           <!-- Responsive Settings Options -->
-          <div class="pt-4 pb-1 border-t border-primary-700 text-primary-700">
+          <div class="border-t border-primary-700 pb-1 pt-4 text-primary-700">
             <div class="px-4">
               <div class="text-xl">
                 {{ $page.props.auth.user.name }}

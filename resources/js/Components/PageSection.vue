@@ -22,7 +22,7 @@
 <template>
   <section
     ref="section"
-    class="w-full h-full min-h-screen px-6 relative overflow-hidden"
+    class="relative h-full min-h-screen w-full overflow-hidden px-6"
     :class="`${paddingTop} ${paddingBottom}`"
   >
     <slot />

@@ -39,14 +39,14 @@
 </script>
 
 <template>
-  <div ref="card" class="bg-white text-primary-700 p-2 rounded-sm" :class="{raised: props.raised}">
-    <div class="h-full w-full border border-primary-700 p-6 rounded-sm">
-      <div v-if="props.logo" class="w-full flex flex-col justify-center items-center">
+  <div ref="card" class="rounded-sm bg-white p-2 text-primary-700" :class="{raised: props.raised}">
+    <div class="h-full w-full rounded-sm border border-primary-700 p-6">
+      <div v-if="props.logo" class="flex w-full flex-col items-center justify-center">
         <Link
           :href="route('home')"
-          class="flex flex-col justify-center items-center mb-6 space-y-6"
+          class="mb-6 flex flex-col items-center justify-center space-y-6"
         >
-          <ApplicationLogo class="w-8 h-8" />
+          <ApplicationLogo class="h-8 w-8" />
           <OurNames type="short" class="text-6xl" />
         </Link>
       </div>

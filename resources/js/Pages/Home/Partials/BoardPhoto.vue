@@ -19,11 +19,11 @@
 
 <template>
   <div
-    class="relative bg-white p-2 raised mx-6 h-full w-full aspect-[1.333]"
+    class="relative mx-6 aspect-[1.333] h-full w-full bg-white p-2 raised"
     :style="{
       transform: `rotate(${props.rotation}deg) translateY(${props.translation}px)`
     }"
   >
-    <ImageObject :image="props.image" class="w-full h-full max-h-full max-w-full aspect-[1.333]" />
+    <ImageObject :image="props.image" class="aspect-[1.333] h-full max-h-full w-full max-w-full" />
   </div>
 </template>

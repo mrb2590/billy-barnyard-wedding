@@ -45,8 +45,8 @@
 
 <template>
   <PageSection ref="section">
-    <div ref="boardsContainer" class="absolute top-0 left-0 h-full w-full mt-16 z-0">
-      <div class="flex justify-between space-y-6 flex-col items-center flex-nowrap overflow-hidden">
+    <div ref="boardsContainer" class="absolute left-0 top-0 z-0 mt-16 h-full w-full">
+      <div class="flex flex-col flex-nowrap items-center justify-between space-y-6 overflow-hidden">
         <WoodBoard
           v-for="i in 4"
           :key="i"
@@ -69,7 +69,7 @@
     <div
       id="ourStory"
       ref="storyContainer"
-      class="w-full flex justify-center items-center text-center z-20 flex-col relative mt-[calc(100vh_-_9rem)] pt-36"
+      class="relative z-20 mt-[calc(100vh_-_9rem)] flex w-full flex-col items-center justify-center pt-36 text-center"
     >
       <PageHeading ref="heading">
         <h2>Our Story</h2>
@@ -77,7 +77,7 @@
 
       <div v-for="(event, i) in events" :key="i" class="mb-16 w-full max-w-xl">
         <FancyCard raised :title="event.year">
-          <div class="grow flex flex-col justify-center items-center text-lg">
+          <div class="flex grow flex-col items-center justify-center text-lg">
             <h3 class="mb-6 text-xl md:text-2xl">{{ event.title }}</h3>
             <p v-if="event.description">
               {{ event.description }}

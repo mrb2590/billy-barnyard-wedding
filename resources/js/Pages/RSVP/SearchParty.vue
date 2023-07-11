@@ -45,7 +45,7 @@
 </script>
 
 <template>
-  <PageSection class="flex flex-col justify-center items-center" has-header has-footer>
+  <PageSection class="flex flex-col items-center justify-center" has-header has-footer>
     <Head title="RSVP">
       <meta
         head-key="description"
@@ -110,7 +110,7 @@
           <ThemeButton
             type="submit"
             variant="secondary"
-            class="self-end mt-4"
+            class="mt-4 self-end"
             :processing="form.processing"
           >
             Search

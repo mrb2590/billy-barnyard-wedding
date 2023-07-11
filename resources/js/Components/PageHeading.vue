@@ -26,7 +26,7 @@
   defineExpose({heading});
 </script>
 <template>
-  <div ref="heading" class="text-shadow-default text-5xl heading-text mb-20 text-center">
+  <div ref="heading" class="heading-text mb-20 text-center text-5xl text-shadow-default">
     <slot />
   </div>
 </template>

@@ -27,7 +27,7 @@
   <div>
     <Head title="Profile" />
 
-    <div class="container mx-auto p-6 space-y-6">
+    <div class="container mx-auto space-y-6 p-6">
       <FancyCard raised>
         <UpdateProfileInformationForm
           :must-verify-email="props.mustVerifyEmail"

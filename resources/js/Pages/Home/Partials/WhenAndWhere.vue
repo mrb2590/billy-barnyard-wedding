@@ -97,18 +97,18 @@
     id="whenAndWhere"
     ref="section"
     has-header
-    class="flex flex-col justify-center items-center"
+    class="flex flex-col items-center justify-center"
   >
-    <div class="grow w-full flex justify-center items-center flex-col">
+    <div class="flex w-full grow flex-col items-center justify-center">
       <PageHeading ref="heading">
         <h2>When &amp; Where</h2>
       </PageHeading>
 
       <div
-        class="container flex flex-col md:flex-row justify-center items-center md:items-stretch space-y-6 md:space-y-0 md:space-x-6 lg:space-x-14"
+        class="container flex flex-col items-center justify-center space-y-6 md:flex-row md:items-stretch md:space-x-6 md:space-y-0 lg:space-x-14"
       >
         <FancyCard ref="partyCard" raised class="w-full max-w-sm">
-          <div class="h-full flex flex-col justify-between items-center text-lg">
+          <div class="flex h-full flex-col items-center justify-between text-lg">
             <h3 class="mb-6 text-xl md:text-2xl">The Party</h3>
 
             <div class="text-center">
@@ -139,7 +139,7 @@
         </FancyCard>
 
         <FancyCard ref="accomCard" raised class="w-full max-w-sm">
-          <div class="h-full flex flex-col justify-between items-center text-lg">
+          <div class="flex h-full flex-col items-center justify-between text-lg">
             <h3 class="mb-6 text-xl md:text-2xl">Accomadations</h3>
 
             <div class="text-center">
