@@ -25,30 +25,30 @@ export const getOurStoryEvents = () => {
       year: '2016',
       title: 'We Meet Again',
       description:
-        'After we both attended an engagement party for our mutual friends from Siena, we would slowly start to see each other more often.'
+        'After we both attended an engagement party for mutual friends from Siena, we would slowly start to see each other more often.'
     },
     {
       year: '2017',
       title: 'Billy Barnyard & The Bills',
       description:
-        "So why do we call ourselves Bill, and what is the Billy Barnyard? Well it's one of those \"you had to be there\" stories, but to put it short, Mike was giving Alex a ride upstate for our friend's birthday. Passing a big red barn on the side of I-87, Alex pointed it out, and speaking with a hillbilly accent, she said “my cousin Billy lives there”. We couldn't stop laughing about it, and ever since we have referred to the barn as the Billy Barnyard and have called each other Bill."
+        'So why do we call ourselves Bill, and what is the Billy Barnyard? Well, it\'s one of those "you had to be there" stories, but to put it short, Mike was giving Alex a ride upstate for a mutual friend\'s birthday. Passing a big red barn on the side of I-87, Alex pointed it out, and speaking with a hillbilly accent, she said "my cousin Billy lives there". We couldn\'t stop laughing about it. Ever since we\'ve referred to the barn as the Billy Barnyard and have called each other Bill.'
     },
     {
       year: '2017',
       title: 'Our First Date',
       description:
-        "As we grew closer, Mike would eventually ask Alex out at dinner at Patricia's of Holmdel. We would revisit the restaurant each year on the same date."
+        "As we grew closer, Mike would eventually ask Alex out to dinner at Patricia's of Holmdel. We would revisit the restaurant each year on the same date."
     },
     {
       year: '2019',
       title: 'Our First Apartment',
       description:
-        "After begging Mike to get our own place, we both rented an apartment in Iselin, NJ and moved in together. It was a good middle ground between Mike's job in Somerville, NJ and Alex's job in Manhattan."
+        "After begging Mike to get move in together, we rented an apartment in Iselin, NJ and moved in. It was good middle ground between Mike's job in Somerville, NJ and Alex's job in Manhattan."
     },
     {
       year: '2020',
       title: 'Our First Pup',
-      description: `Once we moved into the apartment, Alex had to find something else to beg Mike about, and of course it was a puppy. After some resistance, Mike gave in, and we brought home a Sheepadoodle. We named him Bowie, but he likes to be called Mansis, Stinky, and his official, certified title, Stinkman ${getBowieLevel()}, which he worked very hard for.`
+      description: `Once we moved into the apartment, Alex had to find something else to beg Mike about, and of course, it was a puppy. After some resistance, Mike gave in. We brought home a Sheepadoodle and named him Bowie. However, he likes to be called Mansis, Stinky, and his official, certified title, Stinkman ${getBowieLevel()}, which he worked very hard for.`
     },
     {
       year: '2021',
@@ -60,7 +60,7 @@ export const getOurStoryEvents = () => {
       year: '2022',
       title: 'Our First Home',
       description:
-        'Now that Mike was working from home permanently, we were able to move closer to the city and bought a wonderful condo in Hoboken, NJ. Even though Alex hates to admit it, she is officially a Jersey girl now (she secretly loves it).'
+        'Now that Mike was working from home permanently, we were able to move closer to the city and bought a wonderful condo in Hoboken, NJ. Even though Alex hates to admit it, she is officially a Jersey girl now (and secretly loves it)!'
     },
     {
       year: '2023',
