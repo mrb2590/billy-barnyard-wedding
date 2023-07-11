@@ -106,7 +106,7 @@
             </p>
           </div>
 
-          <ImageObject image="venmo-qrcode" class="mb-6" />
+          <ImageObject image="venmo-qrcode" extension="png" class="mb-6" />
 
           <ThemeButton
             variant="secondary"
