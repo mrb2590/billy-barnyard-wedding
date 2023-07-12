@@ -13,7 +13,7 @@
 
 <template>
   <div class="min-h-screen w-full">
-    <AppHead />
+    <AppHead title="Alex & Mike" />
 
     <AlexAndMike />
 

@@ -51,5 +51,14 @@
         animation-container-id="alexAndMike"
       />
     </h1>
+
+    <h2
+      class="body-text absolute bottom-0 flex items-center justify-center p-6 text-center text-xl text-shadow-default"
+    >
+      Alexandra Zephirin <br class="sm:hidden" />
+      &amp; <br class="sm:hidden" />
+      Michael Buonomo <br class="sm:hidden" />
+      are getting married!
+    </h2>
   </PageSection>
 </template>
