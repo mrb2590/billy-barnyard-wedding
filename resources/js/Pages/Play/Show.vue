@@ -44,8 +44,8 @@
         leave-to-class="opacity-0"
         mode="out-in"
       >
-        <FancyCard v-if="!showGame" animate raised logo class="mx-auto mb-8 !max-w-lg text-center">
-          <p class="mb-6 text-xl">
+        <FancyCard v-if="!showGame" animate raised logo class="mx-auto mb-8 max-w-md text-center">
+          <p class="mb-6">
             While we wait for our wedding day to come, enjoy a game where Alex tries to backflip her
             way through our marriage!
           </p>

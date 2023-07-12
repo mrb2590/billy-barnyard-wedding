@@ -44,7 +44,12 @@
     />
 
     <h1 class="mt-36 text-9xl text-shadow-default md:mt-0 md:text-6xl">
-      <OurNames ref="ourNames" type="both" :animate="ourNamesMouseAnimationEnabled" />
+      <OurNames
+        ref="ourNames"
+        type="both"
+        :animate="ourNamesMouseAnimationEnabled"
+        animation-container-id="alexAndMike"
+      />
     </h1>
   </PageSection>
 </template>

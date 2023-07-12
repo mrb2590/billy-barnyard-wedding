@@ -1,7 +1,7 @@
 <script setup>
-  import {inject, onMounted, ref, watch} from 'vue';
+  import {inject, onMounted, onUnmounted, ref, watch} from 'vue';
 
-  import {animateMousePerspective} from '@/Library/animations';
+  import {MousePerspectiveAnimation} from '@/Library/animations';
 
   const props = defineProps({
     animate: {
@@ -14,12 +14,15 @@
       validator(value) {
         return ['long', 'short', 'both'].includes(value);
       }
+    },
+    animationContainerId: {
+      type: String,
+      default: null
     }
   });
 
-  const gsap = inject('gsap');
   const wrapper = ref();
-  const animation = animateMousePerspective(gsap, wrapper);
+  let animation = null;
 
   watch(
     () => props.animate,
@@ -33,7 +36,11 @@
   );
 
   onMounted(() => {
-    animation.init();
+    animation = new MousePerspectiveAnimation(inject('gsap'), wrapper, props.animationContainerId);
+  });
+
+  onUnmounted(() => {
+    animation.removeEventListeners();
   });
 
   defineExpose({wrapper});
