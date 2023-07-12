@@ -13,10 +13,7 @@
 
 <template>
   <div class="min-h-screen w-full">
-    <AppHead
-      title="Alex & Mike"
-      description="Celebrate the marriage of Alexandra Zephirin and Michael Buonomo. Read our story, see our timeline, and RSVP to our wedding!"
-    />
+    <AppHead />
 
     <AlexAndMike />
 
