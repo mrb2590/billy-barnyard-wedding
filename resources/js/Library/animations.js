@@ -11,13 +11,13 @@ export class MousePerspectiveAnimation {
   }
 
   mouseMove(event) {
+    const instance = this;
     this.mouseX = event.pageX;
     this.mouseY = event.pageY;
-    const instance = this;
 
     cancelAnimationFrame(this.frameRequest);
 
-    this.frameRequest = requestAnimationFrame(function () {
+    this.frameRequest = requestAnimationFrame(() => {
       instance.update();
     });
   }
@@ -44,17 +44,25 @@ export class MousePerspectiveAnimation {
 
   addEventListeners() {
     const instance = this;
-    this.container.addEventListener('mousemove', function (event) {
+
+    this.container.addEventListener('mousemove', (event) => {
       instance.mouseMove(event);
     });
-    this.container.addEventListener('resize', this.setScreenCenter);
+
+    window.addEventListener('resize', (event) => {
+      instance.setScreenCenter(event);
+    });
   }
 
   removeEventListeners() {
     const instance = this;
-    this.container.removeEventListener('mousemove', function (event) {
+
+    this.container.removeEventListener('mousemove', (event) => {
       instance.mouseMove(event);
     });
-    this.container.removeEventListener('resize', this.setScreenCenter);
+
+    window.removeEventListener('resize', (event) => {
+      instance.setScreenCenter(event);
+    });
   }
 }

@@ -5,10 +5,12 @@
   import AppHead from '@/Components/AppHead.vue';
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import FancyCard from '@/Components/FancyCard.vue';
+  import InputError from '@/Components/InputError.vue';
   import InputLabel from '@/Components/InputLabel.vue';
   import PageHeading from '@/Components/PageHeading.vue';
   import PageSection from '@/Components/PageSection.vue';
   import RadioButton from '@/Components/RadioButton.vue';
+  import TextInput from '@/Components/TextInput.vue';
   import ThemeButton from '@/Components/ThemeButton.vue';
   import HomeLayout from '@/Layouts/HomeLayout.vue';
 
@@ -46,6 +48,7 @@
       ...props.party.guests.map((guest) => {
         return {
           id: guest.id,
+          email: guest.email ?? '',
           is_attending: guest.is_attending,
           is_attending_rehearsal: guest.is_attending_rehearsal
         };
@@ -83,6 +86,24 @@
         mode="out-in"
       >
         <FancyCard v-if="!showThankYou" animate raised logo class="relative w-full max-w-md">
+          <p class="mb-4 text-center">
+            We ask that you RSVP by August 1st, but if you need to update your RSVP or are a bit
+            late, we will still be notified and appretiate your response.
+          </p>
+          <p class="mb-4 text-center">
+            Select Accept or Decline for each guest in your party, then click or tap the Send RSVP
+            button at the bottom of the page to submit the form.
+          </p>
+
+          <div class="my-6 border border-primary-300" />
+
+          <div v-if="party.message_to_party">
+            <div class="heading-text mb-4">A message from the bride & groom</div>
+            <p>{{ party.message_to_party }}</p>
+
+            <div class="my-6 border border-primary-300" />
+          </div>
+
           <form @submit.prevent="submit">
             <div v-for="(guest, i) in form.guests" :key="i">
               <h2 class="mb-6 text-xl md:text-2xl">
@@ -90,13 +111,21 @@
               </h2>
 
               <div
+                v-if="props.party.guests.find((g) => g.id === guest.id).message_to_guest"
+                class="mb-6"
+              >
+                <p>{{ props.party.guests.find((g) => g.id === guest.id).message_to_guest }}</p>
+              </div>
+
+              <div
                 v-if="props.party.guests.find((g) => g.id === guest.id).has_rehearsal_invite"
                 class="w-full"
               >
                 <p class="mb-6">
-                  We would like to invite you to a welcome dinner on Friday, September 15th, 6:00pm
-                  at the same address as the party.
+                  We would like to invite you to a welcome dinner on Friday, September 15th, 7:00PM
+                  at the same address as the reception.
                 </p>
+
                 <InputLabel value="Welcome Dinner" />
                 <div
                   class="mb-6 mt-2 flex w-full flex-col items-center justify-between space-y-4 md:flex-row md:space-x-4 md:space-y-0"
@@ -124,7 +153,7 @@
                 </div>
               </div>
 
-              <InputLabel :for="`guest${guest.id}Accept`" value="The Party" />
+              <InputLabel :for="`guest${guest.id}Accept`" value="Reception" />
               <div
                 class="mb-6 mt-2 flex w-full flex-col items-center justify-between space-y-4 md:flex-row md:space-x-4 md:space-y-0"
               >
@@ -146,8 +175,43 @@
                 </RadioButton>
               </div>
 
+              <div>
+                <InputLabel
+                  for="email"
+                  value="Email Address"
+                  :error="form.errors[`guests.${i}.email`]"
+                />
+                <TextInput
+                  id="email"
+                  v-model="form.guests.find((g) => g.id === guest.id).email"
+                  type="text"
+                  class="mt-1 block w-full"
+                  autocomplete="email"
+                  :error="form.errors[`guests.${i}.email`]"
+                />
+                <InputError class="mt-2" :message="form.errors[`guests.${i}.email`]" />
+                <p class="mt-2 text-sm">
+                  <span v-if="form.guests.find((g) => g.id === guest.id).email">
+                    You will receive notifications regarding your RSVP and the wedding at the email
+                    address above. You may clear your email address if you do not want to receive
+                    any notifications.
+                  </span>
+                  <span v-else>
+                    Enter your email address to recieve notifications about your RSVP and the
+                    wedding.
+                  </span>
+                </p>
+              </div>
+
               <div class="my-6 border border-primary-300" />
             </div>
+
+            <InputError
+              v-if="form.hasErrors"
+              class="mb-4"
+              message="Please fix all errors then try again."
+            />
+
             <div class="flex justify-end">
               <ThemeButton type="submit" variant="secondary">Send RSVP</ThemeButton>
             </div>
