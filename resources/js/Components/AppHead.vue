@@ -11,7 +11,7 @@
     description: {
       type: String,
       default:
-        'Alexandra Zephirin and Michael Buonomo are getting married! Read our story, see our timeline, and RSVP to our wedding!'
+        'Alexandra Zephirin and Michael Buonomo are getting married! Read our story, get directions and accomadations, and RSVP to our wedding!'
     },
     image: {
       type: String,
