@@ -5,7 +5,7 @@
   const props = defineProps({
     href: {
       type: String,
-      required: true
+      default: null
     },
     active: {
       type: Boolean
@@ -19,7 +19,7 @@
   <Link
     :href="href"
     :class="classes"
-    class="block w-full pl-3 pr-4 py-2 text-left text-lg font-bold font-primary uppercase not-italic text-primary-700 hover:bg-primary-100 focus:outline-none transition duration-150 ease-in-out"
+    class="block w-full py-2 pl-3 pr-4 text-left font-primary text-lg font-bold uppercase not-italic text-primary-700 transition duration-150 ease-in-out hover:bg-primary-100 focus:outline-none"
   >
     <slot />
   </Link>

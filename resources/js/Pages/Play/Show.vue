@@ -21,7 +21,7 @@
     ref="section"
     has-header
     has-footer
-    class="flex flex-col justify-center items-center"
+    class="flex flex-col items-center justify-center"
   >
     <Head title="Play">
       <meta
@@ -33,7 +33,7 @@
 
     <BackgroundImage image="flowers" />
 
-    <div class="relative w-full flex flex-col flex-center items-center">
+    <div class="flex-center relative flex w-full flex-col items-center">
       <PageHeading animate>
         <h1>Flippy Bill</h1>
       </PageHeading>
@@ -47,7 +47,7 @@
         leave-to-class="opacity-0"
         mode="out-in"
       >
-        <FancyCard v-if="!showGame" animate raised logo class="mb-8 !max-w-lg mx-auto text-center">
+        <FancyCard v-if="!showGame" animate raised logo class="mx-auto mb-8 !max-w-lg text-center">
           <p class="mb-6 text-xl">
             While we wait for our wedding day to come, enjoy a game where Alex tries to backflip her
             way through our marriage!
@@ -65,9 +65,9 @@
           <ThemeButton variant="secondary" @click="showGame = !showGame">Play</ThemeButton>
         </FancyCard>
 
-        <div v-else class="mb-8 w-full h-full aspect-[16/9] max-w-6xl">
+        <div v-else class="mb-8 aspect-[16/9] h-full w-full max-w-6xl">
           <iframe
-            class="w-full h-full relative raised"
+            class="relative h-full w-full raised"
             src="https://flippy-bill.buonomo.net"
             frameborder="0"
             scrolling="no"

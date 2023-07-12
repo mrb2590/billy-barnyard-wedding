@@ -63,7 +63,7 @@
     >
       <div
         v-show="open"
-        class="absolute z-50 mt-2 bg-white rounded-sm shadow-lg"
+        class="absolute z-50 mt-2 rounded-sm bg-white shadow-lg"
         raised
         :class="[widthClass, alignmentClasses]"
         style="display: none"

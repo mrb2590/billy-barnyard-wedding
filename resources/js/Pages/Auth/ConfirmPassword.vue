@@ -30,7 +30,7 @@
     ref="section"
     has-header
     has-footer
-    class="flex flex-col justify-center items-center"
+    class="flex flex-col items-center justify-center"
   >
     <Head title="Confirm Password" />
 
@@ -56,7 +56,7 @@
           <InputError class="mt-2" :message="form.errors.password" />
         </div>
 
-        <div class="flex justify-end mt-4">
+        <div class="mt-4 flex justify-end">
           <ThemeButton type="submit" class="ml-4" :processing="form.processing" variant="secondary">
             Confirm
           </ThemeButton>

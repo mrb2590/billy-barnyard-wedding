@@ -34,7 +34,7 @@
     ref="section"
     has-header
     has-footer
-    class="flex flex-col justify-center items-center"
+    class="flex flex-col items-center justify-center"
   >
     <Head title="Confirm Password" />
 

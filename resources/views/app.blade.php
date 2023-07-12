@@ -6,6 +6,8 @@
 
         <title inertia>{{ config('app.name') }}</title>
 
+        <link rel="manifest" href="/site.webmanifest">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -7,7 +7,7 @@
     "trailingComma": "none",
     "vueIndentScriptAndStyle": true,
     "phpVersion": "8.1",
-    "plugins": ["@prettier/plugin-php"],
+    "plugins": ["@prettier/plugin-php", "prettier-plugin-tailwindcss"],
     "pluginSearchDirs": false,
     "overrides": [
         {

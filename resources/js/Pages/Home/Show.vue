@@ -26,13 +26,13 @@
 
     <div class="relative w-full">
       <BackgroundImage image="flowers" />
-      <div class="absolute blur-mask bg-gradient-to-b from-black top-0 left-0 w-full h-14 z-20" />
+      <div class="absolute left-0 top-0 z-20 h-14 w-full bg-gradient-to-b from-black blur-mask" />
 
       <WhenAndWhere />
       <OurStory />
 
       <div
-        class="absolute blur-mask-reverse bg-gradient-to-t from-black bottom-0 left-0 w-full h-14 z-20"
+        class="absolute bottom-0 left-0 z-20 h-14 w-full bg-gradient-to-t from-black blur-mask-reverse"
       />
     </div>
 

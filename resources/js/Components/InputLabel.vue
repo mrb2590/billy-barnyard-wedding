@@ -14,7 +14,7 @@
 <template>
   <label
     :data-error="!!props.error"
-    class="text-primary-700 error:text-danger-700 heading-text w-fit"
+    class="heading-text w-fit text-primary-700 error:text-danger-700"
   >
     <span v-if="props.value">{{ props.value }}</span>
     <slot v-else />

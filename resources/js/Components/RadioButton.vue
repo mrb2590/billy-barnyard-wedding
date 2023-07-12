@@ -36,13 +36,13 @@
   <div class="inline-flex">
     <ThemeButton
       type="button"
-      class="transition-all block w-full"
+      class="block w-full transition-all"
       :variant="props.checked === props.value ? 'success' : 'primary'"
       @click="proxyChecked = props.value"
     >
       <slot />
       <span v-if="props.checked === props.value">
-        <Check class="ml-2 w-3 h-3" />
+        <Check class="ml-2 h-3 w-3" />
       </span>
     </ThemeButton>
     <input

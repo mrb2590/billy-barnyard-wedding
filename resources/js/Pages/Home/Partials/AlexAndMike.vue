@@ -38,12 +38,12 @@
     <BackgroundImage
       ref="background"
       image="alex-mike-engagement"
-      bg-size="bg-[21%_30%]"
+      bg-position="bg-[21%_30%]"
       start="top top"
       animate
     />
 
-    <h1 class="text-shadow-default text-9xl md:text-6xl mt-36 md:mt-0">
+    <h1 class="mt-36 text-9xl text-shadow-default md:mt-0 md:text-6xl">
       <OurNames ref="ourNames" type="both" :animate="ourNamesMouseAnimationEnabled" />
     </h1>
   </PageSection>

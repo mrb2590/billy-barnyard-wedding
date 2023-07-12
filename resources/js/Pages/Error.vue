@@ -52,11 +52,11 @@
     appear
     mode="out-in"
   >
-    <div class="h-screen w-full flex flex-col justify-center items-center p-6">
-      <ApplicationLogo class="w-8 h-8 mb-4" />
-      <OurNames type="short" class="text-6xl mb-6" />
-      <h1 class="text-2xl mb-4">{{ props.status }} {{ title }}</h1>
-      <div class="max-w-lg text-center mb-8">
+    <div class="flex h-screen w-full flex-col items-center justify-center p-6">
+      <ApplicationLogo class="mb-4 h-8 w-8" />
+      <OurNames type="short" class="mb-6 text-6xl" />
+      <h1 class="mb-4 text-2xl">{{ props.status }} {{ title }}</h1>
+      <div class="mb-8 max-w-lg text-center">
         {{ description }}
       </div>
       <ThemeButton :href="route('home')" class="relative z-20">Home</ThemeButton>

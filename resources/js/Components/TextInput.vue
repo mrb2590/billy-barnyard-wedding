@@ -29,7 +29,7 @@
   <input
     ref="input"
     :data-error="!!props.error"
-    class="text-primary-700 focus:ring-1 focus:ring-primary-700 focus:ring-offset-2 focus:ring-offset-primary-400 error:focus:ring-danger-700 error:border-danger-700 border-primary-700 focus:border-primary-700 font-primary font-bold tracking-widest rounded-sm bg-white p-2 transition"
+    class="rounded-sm border-primary-700 bg-white p-2 font-primary font-bold tracking-widest text-primary-700 transition focus:border-primary-700 focus:ring-1 focus:ring-primary-700 focus:ring-offset-2 focus:ring-offset-primary-400 error:border-danger-700 error:focus:ring-danger-700"
     :value="props.modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
   />

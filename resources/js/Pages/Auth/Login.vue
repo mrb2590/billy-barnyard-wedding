@@ -44,7 +44,7 @@
     ref="section"
     has-header
     has-footer
-    class="flex flex-col justify-center items-center"
+    class="flex flex-col items-center justify-center"
   >
     <Head title="Log in" />
 
@@ -85,14 +85,14 @@
           <InputError class="mt-2" :message="form.errors.password" />
         </div>
 
-        <div class="block mt-4">
+        <div class="mt-4 block">
           <InputLabel class="flex items-center">
             <Checkbox v-model:checked="form.remember" name="remember" />
             <span class="ml-2">Remember me</span>
           </InputLabel>
         </div>
 
-        <div class="flex items-center justify-end mt-4">
+        <div class="mt-4 flex items-center justify-end">
           <ThemeLink v-if="props.canResetPassword" :href="route('password.request')">
             Forgot your password?
           </ThemeLink>
