@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Party;
+use App\Models\User;
+use App\Notifications\PartyRSVP;
 use App\Rules\VerifyRSVPCodeToGuest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -52,6 +54,8 @@ class PartyController extends Controller
         $party->load(['guests']);
 
         $request->session()->pull('party');
+
+        User::each(fn(User $user) => $user->notify(new PartyRSVP($party)));
 
         return Redirect::back()->with([
             'party' => $party
