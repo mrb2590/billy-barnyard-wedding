@@ -11,11 +11,11 @@
     description: {
       type: String,
       default:
-        'Celebrate the marriage of Alexandra Zephirin and Michael Buonomo. Read our story, see our timeline, and RSVP to our wedding!'
+        'Alexandra Zephirin and Michael Buonomo are getting married! Read our story, see our timeline, and RSVP to our wedding!'
     },
     image: {
       type: String,
-      default: getStaticAsset('alex-mike-engagement.jpg')
+      default: getStaticAsset('alex-mike-engagement-og-default.jpg')
     }
   });
 </script>
