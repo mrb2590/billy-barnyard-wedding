@@ -1,6 +1,7 @@
 <script setup>
-  import {Head, useForm} from '@inertiajs/vue3';
+  import {useForm} from '@inertiajs/vue3';
 
+  import AppHead from '@/Components/AppHead.vue';
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import Checkbox from '@/Components/Checkbox.vue';
   import FancyCard from '@/Components/FancyCard.vue';
@@ -46,7 +47,7 @@
     has-footer
     class="flex flex-col items-center justify-center"
   >
-    <Head title="Log in" />
+    <AppHead title="Log in" description="Log into your account here." />
 
     <BackgroundImage image="flowers" />
 

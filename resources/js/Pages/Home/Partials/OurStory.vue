@@ -78,8 +78,10 @@
       <div v-for="(event, i) in events" :key="i" class="mb-16 w-full max-w-xl">
         <FancyCard raised :title="event.year">
           <div class="flex grow flex-col items-center justify-center text-lg">
-            <span class="heading-text mb-6 text-xl md:text-xl">{{ event.year }}</span>
-            <h3 class="mb-6 text-xl md:text-2xl">{{ event.title }}</h3>
+            <h3 class="mb-6 text-xl md:text-2xl">
+              <span class="heading-text mb-4 block text-xl md:text-xl">{{ event.year }}</span>
+              {{ event.title }}
+            </h3>
             <p v-if="event.description">
               {{ event.description }}
             </p>

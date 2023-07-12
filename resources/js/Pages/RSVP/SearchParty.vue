@@ -1,7 +1,8 @@
 <script setup>
-  import {Head, useForm} from '@inertiajs/vue3';
+  import {useForm} from '@inertiajs/vue3';
   import {nextTick} from 'vue';
 
+  import AppHead from '@/Components/AppHead.vue';
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import FancyCard from '@/Components/FancyCard.vue';
   import InputError from '@/Components/InputError.vue';
@@ -46,13 +47,10 @@
 
 <template>
   <PageSection class="flex flex-col items-center justify-center" has-header has-footer>
-    <Head title="RSVP">
-      <meta
-        head-key="description"
-        name="description"
-        content="Find your invitation to our wedding and RSVP!"
-      />
-    </Head>
+    <AppHead
+      title="RSVP"
+      description="Search for your invitation with your last name and RSVP code and RSVP to our wedding."
+    />
 
     <BackgroundImage image="flowers" />
 

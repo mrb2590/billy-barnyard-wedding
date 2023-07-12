@@ -1,6 +1,5 @@
 <script setup>
-  import {Head} from '@inertiajs/vue3';
-
+  import AppHead from '@/Components/AppHead.vue';
   import FancyCard from '@/Components/FancyCard.vue';
   import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 
@@ -11,7 +10,7 @@
 
 <template>
   <div class="container mx-auto p-6">
-    <Head title="Dashboard" />
+    <AppHead title="Dashboard" description="View your account dashboard." />
 
     <FancyCard raised> You're logged in! </FancyCard>
   </div>

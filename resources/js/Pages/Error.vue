@@ -1,6 +1,7 @@
 <script setup>
   import {computed} from 'vue';
 
+  import AppHead from '@/Components/AppHead.vue';
   import ApplicationLogo from '@/Components/ApplicationLogo.vue';
   import OurNames from '@/Components/OurNames.vue';
   import ThemeButton from '@/Components/ThemeButton.vue';
@@ -22,7 +23,7 @@
         404: 'Page Not Found',
         500: 'Server Error',
         503: 'Service Unavailable'
-      }[props.status] ?? props.status
+      }[props.status] ?? 'Error'
     );
   });
 
@@ -53,6 +54,7 @@
     mode="out-in"
   >
     <div class="flex h-screen w-full flex-col items-center justify-center p-6">
+      <AppHead :title="`${props.status} ${title}`" :description="description" />
       <ApplicationLogo class="mb-4 h-8 w-8" />
       <OurNames type="short" class="mb-6 text-6xl" />
       <h1 class="mb-4 text-2xl">{{ props.status }} {{ title }}</h1>

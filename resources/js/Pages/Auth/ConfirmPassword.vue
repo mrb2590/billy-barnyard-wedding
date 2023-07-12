@@ -1,6 +1,5 @@
 <script setup>
-  import {Head, useForm} from '@inertiajs/vue3';
-
+  import AppHead from '@/Components/AppHead.vue';
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import FancyCard from '@/Components/FancyCard.vue';
   import InputError from '@/Components/InputError.vue';
@@ -32,7 +31,7 @@
     has-footer
     class="flex flex-col items-center justify-center"
   >
-    <Head title="Confirm Password" />
+    <AppHead title="Confirm Password" description="Confirm your password." />
 
     <BackgroundImage image="flowers" />
 

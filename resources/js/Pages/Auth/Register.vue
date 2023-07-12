@@ -1,6 +1,7 @@
 <script setup>
-  import {Head, useForm} from '@inertiajs/vue3';
+  import {useForm} from '@inertiajs/vue3';
 
+  import AppHead from '@/Components/AppHead.vue';
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import FancyCard from '@/Components/FancyCard.vue';
   import InputError from '@/Components/InputError.vue';
@@ -37,13 +38,11 @@
     has-footer
     class="flex flex-col items-center justify-center"
   >
-    <Head title="Confirm Password" />
+    <AppHead title="Register" description="Register your account here." />
 
     <BackgroundImage image="flowers" />
 
     <FancyCard animate logo raised class="w-full max-w-md">
-      <Head title="Register" />
-
       <form @submit.prevent="submit">
         <div>
           <InputLabel for="firstName" value="First Name" :error="form.errors.first_name" />

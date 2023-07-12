@@ -1,7 +1,8 @@
 <script setup>
-  import {Head, useForm} from '@inertiajs/vue3';
+  import {useForm} from '@inertiajs/vue3';
   import {onMounted, ref} from 'vue';
 
+  import AppHead from '@/Components/AppHead.vue';
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import FancyCard from '@/Components/FancyCard.vue';
   import InputLabel from '@/Components/InputLabel.vue';
@@ -62,13 +63,7 @@
     has-footer
     class="flex flex-col items-center justify-center"
   >
-    <Head title="RSVP">
-      <meta
-        head-key="description"
-        name="description"
-        content="Find your invitation to our wedding and RSVP!"
-      />
-    </Head>
+    <AppHead title="RSVP" description="Send your RSVP." />
 
     <BackgroundImage image="flowers" />
 

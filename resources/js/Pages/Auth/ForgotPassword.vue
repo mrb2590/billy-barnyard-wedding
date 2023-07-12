@@ -1,6 +1,7 @@
 <script setup>
-  import {Head, useForm} from '@inertiajs/vue3';
+  import {useForm} from '@inertiajs/vue3';
 
+  import AppHead from '@/Components/AppHead.vue';
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import FancyCard from '@/Components/FancyCard.vue';
   import InputError from '@/Components/InputError.vue';
@@ -37,13 +38,11 @@
     has-footer
     class="flex flex-col items-center justify-center"
   >
-    <Head title="Confirm Password" />
+    <AppHead title="Forgot Password" description="Reset your password here." />
 
     <BackgroundImage image="flowers" />
 
     <FancyCard animate logo raised class="w-full max-w-md">
-      <Head title="Forgot Password" />
-
       <div class="mb-4">
         Forgot your password? No problem. Just let us know your email address and we will email you
         a password reset link that will allow you to choose a new one.
