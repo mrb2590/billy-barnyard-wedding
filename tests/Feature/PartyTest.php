@@ -59,7 +59,7 @@ class PartyTest extends TestCase
         $party->guests()->each(function (Guest $guest) use ($time) {
             $this->assertTrue($guest->is_attending);
             $this->assertFalse($guest->is_attending_rehearsal);
-            $this->assertGreaterThanOrEqual($guest->updated_at->timestamp, $time->timestamp);
+            $this->assertGreaterThanOrEqual($time->timestamp, $guest->updated_at->timestamp);
         });
     }
 }
