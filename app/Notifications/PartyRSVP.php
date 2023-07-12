@@ -34,12 +34,12 @@ class PartyRSVP extends Notification implements ShouldQueue
     public function __construct(Party $party)
     {
         $this->party = $party;
-        $this->subject = 'The party ' . $party->name . ' has RSVP\'d';
+        $this->subject = 'RSVP - ' . $party->name;
 
         $this->party->guests()->each(function (Guest $guest) {
             array_push(
                 $this->message,
-                $guest->name . ' ' . ($guest->is_attending ? 'will attend' : 'will not attend') . ' the party.'
+                $guest->name . ' ' . ($guest->is_attending ? 'will attend' : 'will not attend') . ' the reception.'
             );
 
             if ($guest->has_rehearsal_invite) {

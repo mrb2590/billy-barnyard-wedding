@@ -109,7 +109,7 @@
       >
         <FancyCard ref="partyCard" raised class="w-full max-w-sm">
           <div class="flex h-full flex-col items-center justify-between text-lg">
-            <h3 class="mb-6 text-xl md:text-2xl">The Party</h3>
+            <h3 class="mb-6 text-xl md:text-2xl">Reception</h3>
 
             <div class="text-center">
               <p class="mb-6">
