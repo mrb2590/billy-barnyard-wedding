@@ -1,6 +1,5 @@
 <script setup>
-  import {Head} from '@inertiajs/vue3';
-
+  import AppHead from '@/Components/AppHead.vue';
   import FancyCard from '@/Components/FancyCard.vue';
   import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 
@@ -25,7 +24,7 @@
 
 <template>
   <div>
-    <Head title="Profile" />
+    <AppHead title="Profile" description="Edit your profile here." />
 
     <div class="container mx-auto space-y-6 p-6">
       <FancyCard raised>

@@ -66,8 +66,8 @@ export const getOurStoryEvents = () => {
       year: '2023',
       title: getCurrentlyMarried() ? 'We Got Married' : 'We Get Married!',
       description: getCurrentlyMarried()
-        ? 'We enjoyed celebrating our special day with you!'
-        : 'We are so excited and cannot wait to celebrate with you!'
+        ? 'Alexandra and Michael Buonomo are now married! We enjoyed celebrating our wedding day with you!'
+        : 'Alexandra Zephirin and Michael Buonomo are getting married! We are so excited and cannot wait to celebrate our wedding day with you!'
     }
   ];
 };

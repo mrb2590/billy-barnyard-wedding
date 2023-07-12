@@ -1,7 +1,7 @@
 <script setup>
-  import {Head} from '@inertiajs/vue3';
   import {ref} from 'vue';
 
+  import AppHead from '@/Components/AppHead.vue';
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import FancyCard from '@/Components/FancyCard.vue';
   import PageHeading from '@/Components/PageHeading.vue';
@@ -23,13 +23,10 @@
     has-footer
     class="flex flex-col items-center justify-center"
   >
-    <Head title="Play">
-      <meta
-        head-key="description"
-        name="description"
-        content="While we wait for our wedding day to come, enjoy a game where Alex tries to backflip her way through our marriage!"
-      />
-    </Head>
+    <AppHead
+      title="Play"
+      description="While we wait for our wedding day to come, enjoy a game where Alex tries to backflip her way through our marriage!"
+    />
 
     <BackgroundImage image="flowers" />
 

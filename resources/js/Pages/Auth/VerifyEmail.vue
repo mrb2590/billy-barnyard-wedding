@@ -1,7 +1,8 @@
 <script setup>
-  import {Head, useForm} from '@inertiajs/vue3';
+  import {useForm} from '@inertiajs/vue3';
   import {computed} from 'vue';
 
+  import AppHead from '@/Components/AppHead.vue';
   import BackgroundImage from '@/Components/BackgroundImage.vue';
   import FancyCard from '@/Components/FancyCard.vue';
   import PageSection from '@/Components/PageSection.vue';
@@ -36,13 +37,11 @@
     has-footer
     class="flex flex-col items-center justify-center"
   >
-    <Head title="Confirm Password" />
+    <AppHead title="Email Vertification" description="Verify your email here." />
 
     <BackgroundImage image="flowers" />
 
     <FancyCard animate logo raised class="w-full max-w-md">
-      <Head title="Email Verification" />
-
       <div class="mb-4">
         Thanks for signing up! Before getting started, could you verify your email address by
         clicking on the link we just emailed to you? If you didn't receive the email, we will gladly
