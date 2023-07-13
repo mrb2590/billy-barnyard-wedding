@@ -43,7 +43,7 @@ export const getOurStoryEvents = () => {
       year: '2019',
       title: 'Our First Apartment',
       description:
-        "After begging Mike to get move in together, we rented an apartment in Iselin, NJ and moved in. It was good middle ground between Mike's job in Somerville, NJ and Alex's job in Manhattan."
+        "After begging Mike to move in together, we rented an apartment in Iselin, NJ and moved in. It was good middle ground between Mike's job in Somerville, NJ and Alex's job in Manhattan."
     },
     {
       year: '2020',
