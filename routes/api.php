@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthUserController;
+use App\Http\Controllers\Api\GuestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')
-    ->get('/user', [AuthUserController::class, 'show'])
-    ->name('user');
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/user', [AuthUserController::class, 'show'])->name('user');
+
+    Route::resource('guests', GuestController::class)->except(['create', 'edit']);
+});
