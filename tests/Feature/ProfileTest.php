@@ -63,7 +63,7 @@ class ProfileTest extends TestCase
 
         $response->assertSessionHasNoErrors()->assertRedirect('/');
 
-        $this->assertGuest();
+        $this->assertGuest('web');
         $this->assertNull($user->fresh());
     }
 
