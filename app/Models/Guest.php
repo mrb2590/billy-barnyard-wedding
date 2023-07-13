@@ -32,7 +32,8 @@ class Guest extends Model
         'relation',
         'message_to_guest',
         'message_from_guest',
-        'notes'
+        'notes',
+        'party_id'
     ];
 
     /**
