@@ -15,7 +15,7 @@ Thank you for your response. We are sad you will not be able to make it to our w
 <p style="text-align: center;">
 7:00PM <br>
 September 15, 2023 <br>
-165 Hardvard Avenue, Rockville Centre, New York
+165 Harvard Avenue, Rockville Centre, New York
 </p>
 @endif
 @if($guest->is_attending)
@@ -25,7 +25,7 @@ September 15, 2023 <br>
 <p style="text-align: center;">
 2:00PM <br>
 September 16, 2023 <br>
-165 Hardvard Avenue, Rockville Centre, New York
+165 Harvard Avenue, Rockville Centre, New York
 </p>
 @endif
 <br>
