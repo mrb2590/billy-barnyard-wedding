@@ -113,7 +113,7 @@
 
             <div class="text-center">
               <p class="mb-6">
-                165 Hardvard Avenue <br />
+                165 Harvard Avenue <br />
                 Rockville Centre <br />
                 New York
               </p>
