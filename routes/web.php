@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FaviconController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PartyController;
@@ -44,10 +43,6 @@ Route::middleware(['party.verify'])
         Route::patch('/parties/{party}', [PartyController::class, 'update'])->name('party.update');
     });
 
-Route::get('/dashboard', [DashboardController::class, 'show'])
-    ->middleware(['auth:sanctum', 'verified'])
-    ->name('dashboard');
-
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -55,3 +50,4 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+require __DIR__ . '/admin.php';

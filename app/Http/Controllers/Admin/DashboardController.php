@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -12,6 +13,6 @@ class DashboardController extends Controller
      */
     public function show(): Response
     {
-        return Inertia::render('Dashboard');
+        return Inertia::render('Admin/Dashboard');
     }
 }

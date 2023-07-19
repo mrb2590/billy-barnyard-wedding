@@ -32,7 +32,7 @@ class GuestController extends Controller
         $validated = $request->validate([
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255'],
+            'email' => ['sometimes', 'nullable', 'string', 'email', 'max:255'],
             'is_child' => ['required', 'boolean'],
             'is_guest' => ['required', 'boolean'],
             'is_attending' => ['sometimes', 'nullable', 'boolean'],
@@ -50,7 +50,10 @@ class GuestController extends Controller
         $guest = new Guest();
         $guest->fill($validated);
         $guest->rsvp_responded_at =
-            $request->has('is_attending') || $request->has('is_attending_rehearsal') ? now() : null;
+            ($request->has('is_attending') && $validated['is_attending'] !== null) ||
+            ($request->has('is_attending_rehearsal') && $validated['is_attending_rehearsal'] !== null)
+                ? now()
+                : null;
         $guest->save();
 
         return new GuestResource($guest);
@@ -74,7 +77,7 @@ class GuestController extends Controller
         $validated = $request->validate([
             'first_name' => ['sometimes', 'string', 'max:255'],
             'last_name' => ['sometimes', 'string', 'max:255'],
-            'email' => ['sometimes', 'string', 'email', 'max:255'],
+            'email' => ['sometimes', 'nullable', 'string', 'email', 'max:255'],
             'is_child' => ['sometimes', 'boolean'],
             'is_guest' => ['sometimes', 'boolean'],
             'is_attending' => ['sometimes', 'nullable', 'boolean'],
@@ -90,8 +93,8 @@ class GuestController extends Controller
 
         $guest->fill($validated);
         $guest->rsvp_responded_at =
-            ($request->has('is_attending') && $request->is_attending !== null) ||
-            ($request->has('is_attending_rehearsal') && $request->is_attending_rehearsal !== null)
+            ($request->has('is_attending') && $validated['is_attending'] !== null) ||
+            ($request->has('is_attending_rehearsal') && $validated['is_attending_rehearsal'] !== null)
                 ? now()
                 : null;
         $guest->save();

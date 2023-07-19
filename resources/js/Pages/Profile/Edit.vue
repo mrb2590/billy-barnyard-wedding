@@ -1,14 +1,13 @@
 <script setup>
   import AppHead from '@/Components/AppHead.vue';
   import FancyCard from '@/Components/FancyCard.vue';
-  import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-
-  import DeleteUserForm from './Partials/DeleteUserForm.vue';
-  import UpdatePasswordForm from './Partials/UpdatePasswordForm.vue';
-  import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm.vue';
+  import AdminLayout from '@/Layouts/AdminLayout.vue';
+  import DeleteUserForm from '@/Pages/Profile/Partials/DeleteUserForm.vue';
+  import UpdatePasswordForm from '@/Pages/Profile/Partials/UpdatePasswordForm.vue';
+  import UpdateProfileInformationForm from '@/Pages/Profile/Partials/UpdateProfileInformationForm.vue';
 
   defineOptions({
-    layout: AuthenticatedLayout
+    layout: AdminLayout
   });
 
   const props = defineProps({
@@ -23,25 +22,23 @@
 </script>
 
 <template>
-  <div>
+  <div class="container mx-auto space-y-6 p-6">
     <AppHead title="Profile" description="Edit your profile here." />
 
-    <div class="container mx-auto space-y-6 p-6">
-      <FancyCard raised>
-        <UpdateProfileInformationForm
-          :must-verify-email="props.mustVerifyEmail"
-          :status="props.status"
-          class="max-w-xl"
-        />
-      </FancyCard>
+    <FancyCard raised>
+      <UpdateProfileInformationForm
+        :must-verify-email="props.mustVerifyEmail"
+        :status="props.status"
+        class="max-w-xl"
+      />
+    </FancyCard>
 
-      <FancyCard raised>
-        <UpdatePasswordForm class="max-w-xl" />
-      </FancyCard>
+    <FancyCard raised>
+      <UpdatePasswordForm class="max-w-xl" />
+    </FancyCard>
 
-      <FancyCard raised>
-        <DeleteUserForm class="max-w-xl" />
-      </FancyCard>
-    </div>
+    <FancyCard raised>
+      <DeleteUserForm class="max-w-xl" />
+    </FancyCard>
   </div>
 </template>

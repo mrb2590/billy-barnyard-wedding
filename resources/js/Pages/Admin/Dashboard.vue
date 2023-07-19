@@ -1,10 +1,10 @@
 <script setup>
   import AppHead from '@/Components/AppHead.vue';
   import FancyCard from '@/Components/FancyCard.vue';
-  import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+  import AdminLayout from '@/Layouts/AdminLayout.vue';
 
   defineOptions({
-    layout: AuthenticatedLayout
+    layout: AdminLayout
   });
 </script>
 
