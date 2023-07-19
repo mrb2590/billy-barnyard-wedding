@@ -24,7 +24,7 @@ class PartySearchController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             'last_name' => ['required', 'string', 'max:255'],
             'rsvp_code' => ['required', 'string', 'size:6', new VerifyRSVPCodeToGuest()]
         ]);

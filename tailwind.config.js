@@ -85,5 +85,11 @@ export default {
         }
       });
     })
+  ],
+  safelist: [
+    {
+      pattern: /text-*/,
+      variants: ['sm']
+    }
   ]
 };

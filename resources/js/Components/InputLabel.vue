@@ -5,7 +5,7 @@
       default: null
     },
     error: {
-      type: String,
+      type: [Array, String],
       default: null
     }
   });

@@ -35,7 +35,7 @@ class PartyController extends Controller
      */
     public function update(Request $request, Party $party): RedirectResponse
     {
-        $this->validate($request, [
+        $request->validate([
             'guests' => ['required', 'array'],
             'guests.*.id' => ['required', 'uuid', new VerifyRSVPCodeToGuest()],
             'guests.*.email' => ['sometimes', 'nullable', 'email'],
@@ -57,8 +57,6 @@ class PartyController extends Controller
 
         $party->load(['guests']);
 
-        $request->session()->pull('party');
-
         User::each(fn(User $user) => $user->notify(new PartyRSVP($party)));
 
         $party
@@ -66,8 +64,6 @@ class PartyController extends Controller
             ->whereNotNull('email')
             ->each(fn($guest) => Mail::to($guest->email)->send(new RSVPThankYou($guest)));
 
-        return Redirect::back()->with([
-            'party' => $party
-        ]);
+        return Redirect::back();
     }
 }

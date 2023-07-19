@@ -127,7 +127,6 @@
         </li>
       </ul>
 
-      <!-- Hamburger -->
       <div
         class="relative z-40 flex w-full items-center justify-between p-2 text-2xl sm:hidden"
         :class="{'absolute left-0 top-0 z-50': showingNavigationDropdown}"
@@ -244,7 +243,7 @@
         <ApplicationLogo class="mx-2 inline-block h-3 w-3 align-baseline" />
         <ThemeLink
           v-if="$page.props.auth.user"
-          :href="route('dashboard')"
+          :href="route('admin.dashboard')"
           @click="showingNavigationDropdown = false"
           >Dashboard</ThemeLink
         >
