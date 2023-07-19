@@ -220,7 +220,7 @@
 
         <FancyCard v-else animate raised class="w-full max-w-md text-center">
           <h2 class="mb-6 text-xl">Thank you</h2>
-          <p class="mb-4">We have recieved your RSVP.</p>
+          <p class="mb-4">We have received your RSVP.</p>
           <p>
             You may come back to update your RSVP at any time if necessarry, so please keep your
             RSVP code handy.
