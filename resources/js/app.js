@@ -46,6 +46,6 @@ createInertiaApp({
     );
   },
   progress: {
-    color: import.meta.env.VITE_APP_THEME_COLOR
+    color: '#fff'
   }
 });

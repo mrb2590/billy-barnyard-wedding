@@ -10,5 +10,6 @@ Route::middleware(['auth:sanctum', 'verified'])
     ->name('admin.')
     ->group(function () {
         Route::get('/', [DashboardController::class, 'show'])->name('dashboard');
+        Route::resource('parties', PartyController::class)->only(['index', 'show', 'create', 'edit']);
         Route::resource('guests', GuestController::class)->only(['index', 'show', 'create', 'edit']);
     });

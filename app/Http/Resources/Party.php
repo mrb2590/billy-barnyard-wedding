@@ -24,7 +24,8 @@ class Party extends JsonResource
             'notes' => $this->notes,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
-            'guests' => Guest::collection($this->whenLoaded('guests'))
+            'guests' => Guest::collection($this->whenLoaded('guests')),
+            'guests_count' => $this->whenCounted('guests')
         ];
     }
 }
