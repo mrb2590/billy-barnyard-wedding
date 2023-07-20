@@ -33,7 +33,7 @@ class RSVPThankYou extends Mailable implements ShouldQueue
      */
     public function envelope(): Envelope
     {
-        return new Envelope(subject: 'We have received for your RSVP');
+        return new Envelope(subject: 'We have received your RSVP');
     }
 
     /**
