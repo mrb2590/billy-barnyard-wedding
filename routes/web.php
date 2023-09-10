@@ -19,11 +19,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/mailable', function () {
-    $guest = App\Models\Guest::where('email', 'mrb2590@gmail.com')->first();
 
-    return new App\Mail\RSVPThankYou($guest);
-});
+// Route::get('/mailable', function () {
+//     $guest = App\Models\Guest::where('email', 'mike@buonomo.net')->first();
+
+//     return new App\Mail\ReminderAndItinerary($guest);
+// });
 
 Route::get('/', [HomeController::class, 'show'])->name('home');
 

@@ -7,7 +7,7 @@ Thank you for your response and get ready to party! We cannot wait to see you at
 @else
 Thank you for your response. We are sad you will not be able to make it to our wedding, but we do hope to see you soon!
 @endif
-</p
+</p>
 @if($guest->is_attending_rehearsal)
 <br>
 <br>
