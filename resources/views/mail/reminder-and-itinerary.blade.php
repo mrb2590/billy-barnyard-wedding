@@ -20,7 +20,7 @@ Hampton Inn & Suites Rockville Centre <br>
 George Martin The Original <br>
 7:00PM <br>
 September 15, 2023 <br>
-65 North Park Ave, Rockville Centre, New York 11570 <br>
+65 North Park Avenue, Rockville Centre, New York 11570 <br>
 <a href="https://goo.gl/maps/eDqLYVd83bEzChYa7" target="_blank">Click here for directions</a>
 </p>
 <br>
