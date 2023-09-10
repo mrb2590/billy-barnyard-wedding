@@ -10,7 +10,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class RSVPThankYou extends Mailable implements ShouldQueue
+class WelcomeDinnerUpdate extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -32,7 +32,7 @@ class RSVPThankYou extends Mailable implements ShouldQueue
      */
     public function envelope(): Envelope
     {
-        return new Envelope(subject: 'We have received your RSVP');
+        return new Envelope(subject: 'Welcome Dinner Update');
     }
 
     /**
@@ -40,7 +40,7 @@ class RSVPThankYou extends Mailable implements ShouldQueue
      */
     public function content(): Content
     {
-        return new Content(markdown: 'mail.rsvp-thank-you');
+        return new Content(markdown: 'mail.welcome-dinner-update');
     }
 
     /**
