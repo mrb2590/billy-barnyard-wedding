@@ -13,6 +13,7 @@
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
+        "aschmelyun/fleet": "^1.1",
         "fakerphp/faker": "^1.9.1",
         "laravel/breeze": "^1.21",
         "laravel/envoy": "^2.8",

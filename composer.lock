@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "deda58e42b35758d093b56148cd4cf8e",
+    "content-hash": "5d9239c77c5223282e4b473b1e692436",
     "packages": [
         {
             "name": "brick/math",
@@ -5726,6 +5726,78 @@
     ],
     "packages-dev": [
         {
+            "name": "aschmelyun/fleet",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aschmelyun/fleet.git",
+                "reference": "90021800552c4282272668e41ab18be1c580d9a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aschmelyun/fleet/zipball/90021800552c4282272668e41ab18be1c580d9a7",
+                "reference": "90021800552c4282272668e41ab18be1c580d9a7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.13.0",
+                "symfony/process": "^6.2",
+                "symfony/yaml": "^6.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^6.0",
+                "nunomaduro/larastan": "^2.0.1",
+                "orchestra/testbench": "^7.0",
+                "pestphp/pest": "^1.21",
+                "pestphp/pest-plugin-laravel": "^1.1",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Aschmelyun\\Fleet\\FleetServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aschmelyun\\Fleet\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Schmelyun",
+                    "email": "me@aschmelyun.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Run multiple Laravel Sail websites on your local environment",
+            "homepage": "https://github.com/aschmelyun/fleet",
+            "keywords": [
+                "aschmelyun",
+                "docker",
+                "fleet",
+                "laravel",
+                "sail",
+                "traefik"
+            ],
+            "support": {
+                "issues": "https://github.com/aschmelyun/fleet/issues",
+                "source": "https://github.com/aschmelyun/fleet/tree/v1.1.0"
+            },
+            "time": "2023-03-05T22:51:57+00:00"
+        },
+        {
             "name": "fakerphp/faker",
             "version": "v1.23.0",
             "source": {
@@ -8153,6 +8225,66 @@
             "time": "2023-06-28T13:51:52+00:00"
         },
         {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.16.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "e62eeb1fe8a8a0b2e83227a6c279c8c59f7d3a15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/e62eeb1fe8a8a0b2e83227a6c279c8c59f7d3a15",
+                "reference": "e62eeb1fe8a8a0b2e83227a6c279c8c59f7d3a15",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0|^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5.24",
+                "spatie/pest-plugin-test-time": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.16.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-01-11T08:43:00+00:00"
+        },
+        {
             "name": "symfony/yaml",
             "version": "v6.3.0",
             "source": {
@@ -8283,5 +8415,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

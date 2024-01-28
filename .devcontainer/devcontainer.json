@@ -2,7 +2,7 @@
 {
     "name": "Billy Barnyard Wedding",
     "dockerComposeFile": ["../docker-compose.yml"],
-    "service": "billybarnyard.test",
+    "service": "billybarnyard-localhost",
     "workspaceFolder": "/var/www/html",
     "customizations": {
         "vscode": {
