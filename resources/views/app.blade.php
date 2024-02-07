@@ -6,19 +6,20 @@
 
         <title inertia>{{ config('app.name') }}</title>
 
-        <link rel="manifest" href="/site.webmanifest">
-
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;800&family=Cormorant:ital,wght@1,700&display=swap" rel="stylesheet">
 
         <!-- Favicon -->
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="application-name" content="{{ config('app.name') }}">
+        <meta name="apple-mobile-web-app-title" content="{{ config('app.name') }}">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ Vite::asset('resources/favicon/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ Vite::asset('resources/favicon/favicon-32x32.png') }}/favicon/?v=0.1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ Vite::asset('resources/favicon/favicon-32x32.png') }}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ Vite::asset('resources/favicon/favicon-16x16.png') }}">
-        <link rel="mask-icon" href="{{ Vite::asset('resources/favicon/apple-touch-icon.png') }}/favicon/safari-pinned-tab.svg?v=0.1.0" color="{{ config('app.theme_color') }}">
         <link rel="shortcut icon" href="{{ Vite::asset('resources/favicon/favicon.ico') }}">
+        <link rel="mask-icon" href="{{ Vite::asset('resources/favicon/safari-pinned-tab.svg') }}" color="{{ config('app.theme_color') }}">
         <meta name="msapplication-TileColor" content="{{ config('app.theme_color') }}">
         <meta name="theme-color" content="{{ config('app.theme_color') }}">
 
