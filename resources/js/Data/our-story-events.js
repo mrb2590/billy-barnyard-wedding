@@ -31,7 +31,7 @@ export const getOurStoryEvents = () => {
       year: '2017',
       title: 'Billy Barnyard & The Bills',
       description:
-        'So why do we call ourselves Bill, and what is the Billy Barnyard? Well, it\'s one of those "you had to be there" stories, but to put it short, Mike was giving Alex a ride upstate for a mutual friend\'s birthday. Passing a big red barn on the side of I-87, Alex pointed it out, and speaking with a hillbilly accent, she said "my cousin Billy lives there". We couldn\'t stop laughing about it. Ever since we\'ve referred to the barn as the Billy Barnyard and have called each other Bill.'
+        'So why do we call ourselves Bill, and what is the Billy Barnyard? Well, it\'s one of those "you had to be there" stories, but to put it short, Mike was giving Alex a ride upstate for a mutual friend\'s birthday. Passing a big red barn on the side of I-87, Alex pointed it out, and speaking with a hillbilly accent, she said "My cousin Billy lives there". We couldn\'t stop laughing about it. Ever since we\'ve referred to the barn as the Billy Barnyard and have called each other Bill.'
     },
     {
       year: '2017',
@@ -43,7 +43,7 @@ export const getOurStoryEvents = () => {
       year: '2019',
       title: 'Our First Apartment',
       description:
-        "After begging Mike to move in together, we rented an apartment in Iselin, NJ and moved in. It was good middle ground between Mike's job in Somerville, NJ and Alex's job in Manhattan."
+        "After begging Mike to move in together, we rented an apartment in Iselin, NJ and moved in. It was a good middle ground between Mike's job in Somerville, NJ and Alex's job in Manhattan."
     },
     {
       year: '2020',
