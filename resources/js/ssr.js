@@ -8,6 +8,7 @@ import {createSSRApp, h} from 'vue';
 import {ZiggyVue} from '../../vendor/tightenco/ziggy/dist/vue.m';
 
 const appName = import.meta.env.VITE_APP_NAME ?? 'Billy Barnyard Wedding';
+const inertiaSsrPort = import.meta.env.VITE_INERTIA_SSR_PORT || 13714;
 
 import.meta.glob(['../images/**', '../favicon/**']);
 
@@ -18,21 +19,23 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-createServer((page) =>
-  createInertiaApp({
-    page,
-    render: renderToString,
-    title: (title) => (title ? `${title} - ${appName}` : appName),
-    resolve: (name) =>
-      resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
-    setup({App, props, plugin}) {
-      return createSSRApp({render: () => h(App, props)})
-        .use(plugin)
-        .use(ZiggyVue, {
-          ...page.props.ziggy,
-          location: new URL(page.props.ziggy.location)
-        })
-        .provide('gsap', gsap);
-    }
-  })
+createServer(
+  (page) =>
+    createInertiaApp({
+      page,
+      render: renderToString,
+      title: (title) => (title ? `${title} - ${appName}` : appName),
+      resolve: (name) =>
+        resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
+      setup({App, props, plugin}) {
+        return createSSRApp({render: () => h(App, props)})
+          .use(plugin)
+          .use(ZiggyVue, {
+            ...page.props.ziggy,
+            location: new URL(page.props.ziggy.location)
+          })
+          .provide('gsap', gsap);
+      }
+    }),
+  inertiaSsrPort
 );
