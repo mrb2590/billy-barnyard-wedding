@@ -1,13 +1,11 @@
-name: Laravel
+name: Build and Test
 
 on:
-  push:
-    branches: ['master', 'develop']
   pull_request:
     branches: ['master', 'develop']
 
 jobs:
-  laravel-tests:
+  run-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -36,7 +34,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '20.10'
 
       - name: Install frontend dependencies
         run: npm install
