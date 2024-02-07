@@ -96,7 +96,7 @@
         <div class="flex h-full flex-col items-center justify-between">
           <div class="text-center">
             <p class="mb-6">
-              We are lucky to have what we need and more, however if you'd like to give us a gift,
+              We are lucky to have what we need and more, however, if you'd like to give us a gift,
               please consider contributing to our kitchen remodel fund. We are very thankful for
               anything.
             </p>
